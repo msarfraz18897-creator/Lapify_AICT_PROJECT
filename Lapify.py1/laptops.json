@@ -1,0 +1,57 @@
+ {
+    "Business/Students Laptops": {
+        "Apple": ["MacBook Air M1", "MacBook Air M2", "MacBook Pro 13"],
+        "HP": ["EliteBook 840", "ProBook 450", "Dragonfly"],
+        "Dell": ["Latitude 5440", "Latitude 7440", "XPS 13"],
+        "Lenovo": ["ThinkPad X1 Carbon", "ThinkPad T14", "ThinkPad L14"],
+        "Asus": ["ExpertBook B9", "ZenBook 14", "ZenBook S13"],
+        "Acer": ["TravelMate P6", "TravelMate P4", "Swift 5"],
+        "Samsung": ["Galaxy Book2 Pro", "Galaxy Book Pro 360", "Galaxy Book3"],
+        "Huawei": ["MateBook X Pro", "MateBook 14", "MateBook D16"],
+        "Microsoft": ["Surface Laptop 4", "Surface Laptop 5", "Surface Laptop Studio"]
+    },
+    "Gaming Laptops": {
+        "Apple": ["MacBook Pro 14", "MacBook Pro 16", "MacBook Air M2"],
+        "HP": ["Omen 16", "Victus 15", "Omen X"],
+        "Dell": ["Alienware m15", "Alienware x16", "Dell G15"],
+        "Lenovo": ["Legion 5", "Legion 7", "Legion Pro 5"],
+        "Asus": ["ROG Strix G16", "ROG Zephyrus G14", "TUF Gaming F15"],
+        "Acer": ["Predator Helios 300", "Predator Triton 500", "Nitro 5"],
+        "Samsung": ["Galaxy Book Odyssey", "Galaxy Book Ultra", "Galaxy Book Pro"],
+        "Huawei": ["MateBook 16s", "MateBook X Pro", "MateBook D16"],
+        "Microsoft": ["Surface Laptop Studio", "Surface Book 3", "Surface Pro 9"]
+    },
+    "Workstation Laptops": {
+        "Apple": ["MacBook Pro 14 M2 Pro", "MacBook Pro 16 M2 Max", "Mac Studio"],
+        "HP": ["ZBook Fury", "ZBook Power", "ZBook Studio"],
+        "Dell": ["Precision 3581", "Precision 7680", "Precision 7770"],
+        "Lenovo": ["ThinkPad P1", "ThinkPad P15", "ThinkPad P16"],
+        "Asus": ["ProArt Studiobook", "ZenBook Pro Duo", "Vivobook Pro"],
+        "Acer": ["ConceptD 7", "ConceptD 5", "Triton 500 SE"],
+        "Samsung": ["Galaxy Book Ultra", "Galaxy Book3 Pro", "Galaxy Odyssey"],
+        "Huawei": ["MateBook X Pro", "MateBook 16", "MateBook D16"],
+        "Microsoft": ["Surface Laptop Studio", "Surface Book 3", "Surface Pro 9"]
+    },
+    "2-in-1 / Convertible Laptops": {
+        "Apple": ["iPad Pro", "iPad Air", "iPad Mini"],
+        "HP": ["Spectre x360", "Envy x360", "Pavilion x360"],
+        "Dell": ["XPS 13 2-in-1", "Inspiron 14 2-in-1", "Latitude 7320"],
+        "Lenovo": ["Yoga 9i", "Yoga Slim 7", "ThinkPad X1 Yoga"],
+        "Asus": ["ZenBook Flip 14", "VivoBook Flip", "ROG Flow X13"],
+        "Acer": ["Spin 5", "Spin 7", "Chromebook Spin"],
+        "Samsung": ["Galaxy Book Pro 360", "Galaxy Book2 360", "Galaxy Book Flex"],
+        "Huawei": ["MateBook E", "MateBook 14s", "MateBook X Pro"],
+        "Microsoft": ["Surface Pro 8", "Surface Pro 9", "Surface Go 3"]
+    },
+    "Budget / Entry-Level Laptops": {
+        "Apple": ["MacBook Air M1", "MacBook Air M2", "iPad 10th Gen"],
+        "HP": ["HP 14s", "Pavilion 15", "Chromebook 14"],
+        "Dell": ["Inspiron 15", "Vostro 3520", "Chromebook 3110"],
+        "Lenovo": ["IdeaPad 3", "IdeaPad Slim 5", "Chromebook Duet"],
+        "Asus": ["VivoBook 15", "VivoBook Go", "Chromebook C423"],
+        "Acer": ["Aspire 3", "Aspire 5", "Chromebook 314"],
+        "Samsung": ["Galaxy Book Go", "Galaxy Chromebook", "Galaxy Book2"],
+        "Huawei": ["MateBook D14", "MateBook D15", "MateBook E Go"],
+        "Microsoft": ["Surface Go 3", "Surface Laptop Go", "Surface Pro X"]
+    }
+}

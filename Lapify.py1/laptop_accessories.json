@@ -1,0 +1,81 @@
+{
+    "keyboard":{
+        "Logitech": ["MX Keys","MX Mechanical","G Pro X","G915 Lightspeed","K380"],
+
+        "Microsoft": ["Sculpt Ergonomic Keyboard","Surface Keyboard","Designer Compact Keyboard"],
+
+        "Razer": ["BlackWidow V4","Huntsman Mini","Huntsman Elite","Ornata V3"],
+
+        "Corsair": ["K95 RGB Platinum","K70 RGB MK.2","K100 RGB","K65 Mini"],
+
+        "SteelSeries": ["Apex Pro","Apex 7","Apex 3","Apex Pro Mini"],  
+
+        "Keychron": ["Keychron K2","Keychron K4","Keychron K6","Keychron K8 Pro","Keychron Q1"],
+
+        "Ducky": ["One 2 Mini","One 3 SF","One 3 TKL","Shine 7"],
+
+        "Drop": ["Drop CTRL","Drop ALT","Drop SHIFT"],
+
+        "Filco": ["Majestouch 2","Majestouch Convertible 2"],
+
+        "HHKB": ["HHKB Professional Hybrid","HHKB Professional Classic"],
+
+        "Epomaker": ["EP84","TH80","GK68XS"],
+
+        "Akko": ["Akko 3068B","Akko 5075S","Akko MOD 007"],
+
+        "Royal Kludge": ["RK61","RK84","RK96"]
+    },
+    
+    "microphone": {
+        "Shure": ["SM58","SM57","SM7B","MV7","MV7+"],
+
+        "Audio-Technica": ["AT2020","AT2020USB","AT2035","AT4040"],
+
+        "Rode": ["NT1-A","NT-USB","NT-USB Mini","PodMic"],
+
+        "Sennheiser": ["MD421","MD441","MKH416","Evolution Series"],
+
+        "Neumann": ["U87","TLM 102","KM 184","TLM 103"],
+
+        "AKG": ["C414 XLS","P220","C214"],
+
+        "Blue": ["Yeti","Snowball"],
+
+        "HyperX": ["QuadCast","QuadCast S","QuadCast 2"],
+
+        "Samson": ["Q2U","Go Mic"],
+
+        "Behringer": ["C-1U","XM8500"],
+
+        "Fifine": ["AM8","A6V"],
+
+        "Boya": ["BY-MM1","Magic Mic"]
+    },
+
+    "cooling_fan":{
+        "Cooler Master": ["Notepal X3","Notepal U3 Plus","Notepal XL"],
+
+        "Thermaltake": ["Massive 20 RGB","Massive TM","Massive 14"],
+
+        "Havit": ["HV-F2056","HV-F2076","HV-F2081"],
+
+        "KLIM": ["Wind","Cool Plus","Cyclone"],
+
+        "TopMate": ["C5","C11","K5"],
+
+        "Deepcool": ["N200","Multi Core X6"],
+
+        "Targus": ["Chill Mat","Dual Fan Chill Mat"],
+
+        "Tree New Bee": ["Cooling Pad","RGB Cooling Pad"],
+
+        "Cosmic Byte": ["Meteor","Cyclone"],
+
+        "Zinq": ["Zinq Cool Slate","Zinq Z20 Cooler"],
+
+        "Portronics": ["Toad 13","Toad 15"],
+
+        "Lapcare": ["ChillMate","Coolpad"]
+    }
+}

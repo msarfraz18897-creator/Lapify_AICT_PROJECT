@@ -1,0 +1,32 @@
+{
+        "1. How do I choose the right laptop?": 
+        "Consider your usage: business, gaming, or basic tasks. Look at specs like RAM, storage, CPU, and battery life.",
+        "2. What is the best laptop for students?":
+        "Business or student laptops with long battery life, portability, and moderate performance are ideal.",
+        "3. Can I upgrade the RAM or storage later?": 
+        "Depends on the model. Some laptops have soldered RAM or SSDs, so check specs before buying.",
+        "4. How often should I replace my laptop?":
+        "Typically every 3-5 years depending on usage, software requirements, and performance needs.",
+        "5. Do you provide warranty or support info?": 
+        "Yes, always check the manufacturer’s warranty for each laptop and available support plans.",
+        "6. What is the difference between SSD and HDD?": 
+        "SSD is faster, quieter, and more durable than HDD. HDD is cheaper and offers more storage.",
+        "7. What is a 2-in-1 laptop?":
+        "A 2-in-1 or convertible laptop can function as both a laptop and a tablet, often with touchscreen support.",
+        "8. How much RAM do I need?":
+        "For basic use: 8GB is sufficient. For gaming or professional work: 16GB or more is recommended.",
+        "9. How long does a laptop battery last?":
+        "Battery life varies from 4 to 20 hours depending on the model, usage, and power settings.",
+        "10. Are gaming laptops suitable for work tasks?":
+        "Yes, gaming laptops are powerful but heavier and consume more battery. Not ideal for light portability needs.",
+        "11. What is the difference between Intel and AMD processors?":
+        "Both are good. Intel has strong single-core performance; AMD offers better multi-core performance in many models.",
+        "12. Should I prioritize CPU, GPU, or RAM?":
+        "It depends on usage: Gaming = GPU, Workstation = CPU+RAM, Basic = balanced specs.",
+        "13. Do I need a touchscreen laptop?":
+        "Only if you plan to use touch features or stylus input. Otherwise, it's optional.",
+        "14. Can I use a laptop for gaming on a budget?":
+        "Yes, but budget laptops may limit graphics settings. Look for laptops with dedicated GPUs if possible.",
+        "15. How do I clean and maintain my laptop?":
+        "Keep it dust-free, avoid liquid spills, use a cooling pad for gaming laptops, and clean the screen with microfiber cloth."
+}
