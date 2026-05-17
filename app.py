@@ -266,7 +266,7 @@ else:
 
 # ================= ACCESSORIES =================
 
-elif menu == "Accessories":
+if menu == "Accessories":
 
     st.header("Laptop Accessories")
 
