@@ -135,7 +135,7 @@ st.sidebar.title("Navigation")
 menu = st.sidebar.radio(
     "Select Option",
     [
-        "Full Project Report",
+        "Project Report",
         "Home",
         "Laptop Brands",
         "Laptop Categories",
@@ -341,14 +341,53 @@ elif menu == "Accessories":
 
 # ================= FAQ =================
 
-elif menu == "FAQs":
+faq_list = {
 
-    st.header("Frequently Asked Questions")
+    "1. How do I choose the right laptop?":
+    "Consider your usage: business, gaming, or basic tasks. Look at specs like RAM, storage, CPU, and battery life.",
 
-    for question, answer in faq_list.items():
+    "2. What is the best laptop for students?":
+    "Business or student laptops with long battery life, portability, and moderate performance are ideal.",
 
-        with st.expander(question):
-            st.write(answer)
+    "3. Can I upgrade the RAM or storage later?":
+    "Depends on the model. Some laptops have soldered RAM or SSDs, so check specifications before buying.",
+
+    "4. How often should I replace my laptop?":
+    "Typically every 3-5 years depending on usage, software requirements, and performance needs.",
+
+    "5. Do you provide warranty or support info?":
+    "Yes, always check the manufacturer warranty and available support plans.",
+
+    "6. What is the difference between SSD and HDD?":
+    "SSD is faster, quieter, and more durable than HDD. HDD is cheaper and offers larger storage.",
+
+    "7. What is a 2-in-1 laptop?":
+    "A 2-in-1 laptop can function as both a laptop and a tablet with touchscreen support.",
+
+    "8. How much RAM do I need?":
+    "8GB is enough for normal users while 16GB or more is recommended for gaming and professional work.",
+
+    "9. How long does a laptop battery last?":
+    "Battery life varies from 4 to 20 hours depending on model and usage.",
+
+    "10. Are gaming laptops suitable for work tasks?":
+    "Yes, gaming laptops are powerful enough for professional tasks but are usually heavier.",
+
+    "11. What is the difference between Intel and AMD processors?":
+    "Intel provides strong single-core performance while AMD offers excellent multi-core performance.",
+
+    "12. Should I prioritize CPU, GPU, or RAM?":
+    "It depends on your needs: Gaming = GPU, Workstation = CPU + RAM, Basic Use = balanced specifications.",
+
+    "13. Do I need a touchscreen laptop?":
+    "Only if you plan to use touch features or stylus input. Otherwise it is optional.",
+
+    "14. Can I use a laptop for gaming on a budget?":
+    "Yes, but budget gaming laptops may require lower graphics settings.",
+
+    "15. How do I clean and maintain my laptop?":
+    "Keep it dust-free, avoid liquids, use a cooling pad, and clean the screen with a microfiber cloth."
+}
 
 # ================= ABOUT =================
 
