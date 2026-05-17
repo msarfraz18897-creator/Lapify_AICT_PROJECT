@@ -2,23 +2,22 @@ import streamlit as st
 import json
 
 st.title("Lapify - Laptop Recommendation System")
-
 st.write("Welcome to Lapify")
 
-# Load laptops data
+# Load JSON data
 with open("Lapify.py1/laptops.json", "r") as file:
     laptops = json.load(file)
 
-brands = []
+# Get categories
+categories = list(laptops.keys())
 
-for laptop in laptops:
-   if str(laptop) not in brands:
-        brands.append(str(laptop))
+# Dropdown
+selected_category = st.selectbox("Select Category", categories)
 
-selected_brand = st.selectbox("Select Brand", brands)
-
+# Show laptops
 if st.button("Show Laptops"):
-    for laptop in laptops:
-        if str(laptop) == selected_brand:
-            st.subheader(laptop["name"])
-            st.write(laptop)
+    
+    st.subheader(f"{selected_category}")
+
+    for item in laptops[selected_category]:
+        st.write(item)
