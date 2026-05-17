@@ -463,7 +463,7 @@ Mehwish Bibi
 <hr style="border:1px solid #444; margin-top:30px; margin-bottom:30px;">
 
 <h2 style="
-color:#FF6347;
+color:#00BFFF;
 font-size:34px;
 font-family:Arial;
 font-weight:bold;
@@ -473,7 +473,7 @@ Our Goal
 
 <p style="
 font-size:19px;
-color:#F5F5F5;
+color:#00BFFF;
 line-height:1.8;
 font-family:Arial;
 ">
