@@ -275,7 +275,11 @@ elif menu == "FAQs":
 
 # ================= ABOUT US =================
 
-st.markdown("""
+elif menu == "About Us":
+
+    st.header("About Us")
+
+    st.markdown("""
 <div style="
 padding:35px;
 border-radius:18px;
