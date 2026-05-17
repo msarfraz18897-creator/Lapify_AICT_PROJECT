@@ -13,7 +13,7 @@ brands = []
 
 for laptop in laptops:
    if str(laptop) not in brands:
-        brands.append(laptop["brand"])
+        brands.append(str(laptop))
 
 selected_brand = st.selectbox("Select Brand", brands)
 
