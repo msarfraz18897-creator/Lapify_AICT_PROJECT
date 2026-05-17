@@ -257,7 +257,7 @@ if menu == "Laptop Suggestor":
     if selected_model in laptop_specs:
 
         specs = laptop_specs[selected_model]
-
+        
         for key, value in specs.items():
             st.write(f"**{key}:** {value}")
 
