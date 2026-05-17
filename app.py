@@ -1,6 +1,7 @@
 import streamlit as st
 
 # ================= PAGE CONFIG =================
+
 st.set_page_config(
     page_title="Lapify",
     page_icon="💻",
@@ -8,12 +9,13 @@ st.set_page_config(
 )
 
 # ================= TITLE =================
-st.title("💻 Lapify - Laptop Recommendation System")
 
-st.markdown("""
-Welcome to **Lapify** 🎯
+st.title("Lapify - Laptop Recommendation System")
 
-This smart laptop recommendation system helps users choose the perfect laptop according to their needs and budget.
+st.write("""
+Welcome to Lapify
+
+A smart laptop recommendation system that helps users choose the right laptop according to their needs and budget.
 """)
 
 # ================= DATA =================
@@ -27,7 +29,7 @@ laptop_brands = [
     "Acer",
     "Samsung",
     "Huawei",
-    "Microsoft",
+    "Microsoft"
 ]
 
 laptops = {
@@ -128,52 +130,50 @@ accessories = {
 
 # ================= SIDEBAR =================
 
-st.sidebar.title("📂 Navigation")
+st.sidebar.title("Navigation")
 
 menu = st.sidebar.radio(
     "Select Option",
     [
-        "📘 Full Project Report",
-        "🏠 Home",
-        "💻 Laptop Brands",
-        "📂 Laptop Categories",
-        "🎯 Laptop Suggestor",
-        "🖥 Accessories",
-        "❓ FAQs",
-        "ℹ About Us",
-        "📞 Contact Us"
+        "Full Project Report",
+        "Home",
+        "Laptop Brands",
+        "Laptop Categories",
+        "Laptop Suggestor",
+        "Accessories",
+        "FAQs",
+        "About Us",
+        "Contact Us"
     ]
 )
 
 # ================= FULL PROJECT REPORT =================
 
-if menu == "📘 Full Project Report":
+if menu == "Full Project Report":
 
-    st.title("📘 Full Project Report")
+    st.title("Full Project Report")
 
-    st.markdown("""
-# Pakistan Institute of Engineering & Applied Sciences
+    st.header("Pakistan Institute of Engineering & Applied Sciences")
 
-## AICT LAB PROJECT
+    st.subheader("AICT LAB PROJECT")
 
-### A Console-Based Laptop & Accessories Recommendation System
-""")
+    st.write("A Console-Based Laptop & Accessories Recommendation System")
 
     st.markdown("---")
 
-    st.subheader("👨‍💻 Submitted By")
+    st.subheader("Submitted By")
 
     st.write("""
 • Muhammad Sarfraz  
 • Mehwish Bibi
 """)
 
-    st.subheader("👨‍🏫 Project Supervisors")
+    st.subheader("Project Supervisors")
 
     st.markdown("""
-<h3 style='color:#00FF7F;'>✨ Muhammad Musa ✨</h3>
+<h3 style='color:#00FF7F;'>Muhammad Musa</h3>
 
-<h3 style='color:#FF69B4;'>✨ Urwa Rasheed ✨</h3>
+<h3 style='color:#FF69B4;'>Urwa Rasheed</h3>
 """, unsafe_allow_html=True)
 
     st.markdown("---")
@@ -181,7 +181,9 @@ if menu == "📘 Full Project Report":
     st.header("1. Introduction")
 
     st.write("""
-In today’s fast-paced digital world, choosing the right laptop has become a challenging task due to the large number of available brands, models, and specifications.
+In today’s fast-paced digital world, choosing the right laptop has become a challenging task due to the vast number of brands, models, and specifications available.
+
+Many users end up purchasing laptops that do not meet their actual requirements, resulting in wasted money and dissatisfaction.
 
 Lapify is a Python-based laptop recommendation system designed to help users choose suitable laptops and accessories according to their needs.
 """)
@@ -189,17 +191,19 @@ Lapify is a Python-based laptop recommendation system designed to help users cho
     st.header("2. Problem Statement")
 
     st.write("""
-Many users buy laptops without understanding their actual requirements, which often results in wasted money and dissatisfaction.
+Many customers follow market trends instead of understanding their personal requirements while buying laptops.
+
+This often leads to purchasing devices with unnecessary features or insufficient performance.
 """)
 
     st.header("3. Objectives of the Project")
 
     st.write("""
-• Recommend laptops according to categories  
-• Display laptop specifications  
-• Recommend accessories  
-• Build an interactive recommendation system  
-• Help users make better purchasing decisions
+• To guide users in selecting laptops according to categories  
+• To provide laptop brand and specification details  
+• To recommend accessories such as keyboards, microphones, and cooling pads  
+• To create an interactive recommendation system  
+• To minimize wrong purchasing decisions
 """)
 
     st.header("4. Scope of the Project")
@@ -217,8 +221,10 @@ Many users buy laptops without understanding their actual requirements, which of
 • Python  
 • Streamlit  
 • JSON Data Handling  
+• File Handling  
+• Functions  
 • Conditional Statements  
-• Functions & Loops
+• Loops
 """)
 
     st.header("6. Project Workflow")
@@ -233,30 +239,30 @@ Many users buy laptops without understanding their actual requirements, which of
     st.header("7. Main Features")
 
     st.write("""
-✅ Laptop Brands  
-✅ Laptop Categories  
-✅ Laptop Suggestor  
-✅ Accessories  
-✅ FAQs  
-✅ About Us  
-✅ Contact Us
+• Laptop Brands  
+• Laptop Categories  
+• Laptop Suggestor  
+• Accessories  
+• FAQs  
+• About Us  
+• Contact Us
 """)
 
     st.header("8. Conclusion")
 
     st.write("""
-Lapify successfully demonstrates a smart laptop recommendation system using Python and Streamlit.
+Lapify successfully demonstrates a laptop and accessories recommendation system using Python and Streamlit.
 
-The project provides users with useful guidance while applying important programming concepts in a practical way.
+The project helps users make informed purchasing decisions through an interactive and user-friendly interface.
 """)
 
-    st.success("✅ Full Project Report Loaded Successfully")
+    st.success("Project Report Loaded Successfully")
 
 # ================= HOME =================
 
-elif menu == "🏠 Home":
+elif menu == "Home":
 
-    st.header("🏠 Home")
+    st.header("Home")
 
     st.write("""
 Many people waste money on laptops they don't actually need.
@@ -266,27 +272,27 @@ Lapify helps users choose the best laptop according to their requirements and bu
 
 # ================= BRANDS =================
 
-elif menu == "💻 Laptop Brands":
+elif menu == "Laptop Brands":
 
-    st.header("💻 Laptop Brands")
+    st.header("Laptop Brands")
 
     for brand in laptop_brands:
-        st.write(f"✅ {brand}")
+        st.write(f"• {brand}")
 
 # ================= CATEGORIES =================
 
-elif menu == "📂 Laptop Categories":
+elif menu == "Laptop Categories":
 
-    st.header("📂 Laptop Categories")
+    st.header("Laptop Categories")
 
     for category in laptops.keys():
-        st.write(f"🔹 {category}")
+        st.write(f"• {category}")
 
 # ================= LAPTOP SUGGESTOR =================
 
-elif menu == "🎯 Laptop Suggestor":
+elif menu == "Laptop Suggestor":
 
-    st.header("🎯 Laptop Suggestor")
+    st.header("Laptop Suggestor")
 
     category = st.selectbox(
         "Select Laptop Category",
@@ -298,7 +304,7 @@ elif menu == "🎯 Laptop Suggestor":
         list(laptops[category].keys())
     )
 
-    st.subheader("💻 Available Models")
+    st.subheader("Available Models")
 
     models = laptops[category][brand]
 
@@ -309,7 +315,7 @@ elif menu == "🎯 Laptop Suggestor":
 
     if selected_model in laptop_specs:
 
-        st.subheader("⚙ Specifications")
+        st.subheader("Specifications")
 
         specs = laptop_specs[selected_model]
 
@@ -321,9 +327,9 @@ elif menu == "🎯 Laptop Suggestor":
 
 # ================= ACCESSORIES =================
 
-elif menu == "🖥 Accessories":
+elif menu == "Accessories":
 
-    st.header("🖥 Laptop Accessories")
+    st.header("Laptop Accessories")
 
     accessory_type = st.selectbox(
         "Select Accessory Type",
@@ -331,13 +337,13 @@ elif menu == "🖥 Accessories":
     )
 
     for item in accessories[accessory_type]:
-        st.write(f"✅ {item}")
+        st.write(f"• {item}")
 
 # ================= FAQ =================
 
-elif menu == "❓ FAQs":
+elif menu == "FAQs":
 
-    st.header("❓ Frequently Asked Questions")
+    st.header("Frequently Asked Questions")
 
     for question, answer in faq_list.items():
 
@@ -346,9 +352,9 @@ elif menu == "❓ FAQs":
 
 # ================= ABOUT =================
 
-elif menu == "ℹ About Us":
+elif menu == "About Us":
 
-    st.header("ℹ About Us")
+    st.header("About Us")
 
     st.write("""
 Lapify is a smart laptop recommendation system developed to help users choose the right laptop according to their needs and budget.
@@ -357,29 +363,29 @@ Lapify is a smart laptop recommendation system developed to help users choose th
     st.markdown("""
 <div style='padding:20px;border-radius:15px;background-color:#1e1e1e'>
 
-<h2 style='color:#00FFFF;'>🎓 AICT Lab Project</h2>
+<h2 style='color:#00FFFF;'>AICT Lab Project</h2>
 
 <p style='font-size:18px;color:white;'>
-This project was developed under the guidance, mentorship, and support of our respected instructors.
+This project was developed under the guidance and support of our respected instructors.
 </p>
 
-<h2 style='color:#FFD700;'>👨‍🏫 Project Supervisors</h2>
+<h2 style='color:#FFD700;'>Project Supervisors</h2>
 
-<h3 style='color:#00FF7F;'>✨ Muhammad Musa ✨</h3>
+<h3 style='color:#00FF7F;'>Muhammad Musa</h3>
 
-<h3 style='color:#FF69B4;'>✨ Urwa Rasheed ✨</h3>
+<h3 style='color:#FF69B4;'>Urwa Rasheed</h3>
 
 <p style='font-size:17px;color:#D3D3D3;'>
 Their encouragement and technical guidance played a major role in the successful completion of this project.
 </p>
 
-<h2 style='color:#00BFFF;'>👨‍💻 Developed By</h2>
+<h2 style='color:#00BFFF;'>Developed By</h2>
 
 <h3 style='color:#FFA500;'>Muhammad Sarfraz</h3>
 
 <h3 style='color:#7CFC00;'>Mehwish Bibi</h3>
 
-<h2 style='color:#FF6347;'>🚀 Our Goal</h2>
+<h2 style='color:#FF6347;'>Our Goal</h2>
 
 <p style='font-size:17px;color:white;'>
 To help users make smarter and more informed laptop purchasing decisions.
@@ -390,10 +396,10 @@ To help users make smarter and more informed laptop purchasing decisions.
 
 # ================= CONTACT =================
 
-elif menu == "📞 Contact Us":
+elif menu == "Contact Us":
 
-    st.header("📞 Contact Us")
+    st.header("Contact Us")
 
-    st.write("📍 PIEAS Islamabad, Pakistan")
-    st.write("📧 msarfraz18897@gmail.com")
-    st.write("📱 WhatsApp: +92 304 9476304")
+    st.write("PIEAS Islamabad, Pakistan")
+    st.write("Email: msarfraz18897@gmail.com")
+    st.write("WhatsApp: +92 304 9476304")
