@@ -18,15 +18,6 @@ Welcome to Lapify
 A smart laptop recommendation system that helps users choose the right laptop according to their needs and budget.
 """)
 
-# ================= INTRO =================
-
-st.info("""
-Many people waste money on the wrong devices because they follow trends instead of their real needs,
-ending up with features they never use and performance they don’t get.
-
-Lapify helps users choose the right device so their money is spent wisely.
-""")
-
 # ================= DATA =================
 
 laptop_brands = [
@@ -186,7 +177,6 @@ st.sidebar.title("Navigation")
 menu = st.sidebar.radio(
     "Select Option",
     [
-        "Project Report",
         "Home",
         "Laptop Brands",
         "Laptop Categories",
@@ -198,60 +188,6 @@ menu = st.sidebar.radio(
     ]
 )
 
-# ================= PROJECT REPORT =================
-
-if menu == "Project Report":
-
-    st.title("Full Project Report")
-
-    st.header("Pakistan Institute of Engineering & Applied Sciences")
-    st.subheader("AICT LAB PROJECT")
-    st.write("A Console-Based Laptop & Accessories Recommendation System")
-
-    st.markdown("---")
-
-    st.subheader("Submitted By")
-
-    st.write("""
-• Muhammad Sarfraz  
-• Mehwish Bibi
-""")
-
-    st.subheader("Project Supervisors")
-
-    st.markdown("""
-<h3 style='color:#00BFFF;'>Muhammad Musa</h3>
-<h3 style='color:#00BFFF;'>Urwa Rasheed</h3>
-""", unsafe_allow_html=True)
-
-    st.markdown("---")
-
-    st.header("Introduction")
-
-    st.write("""
-In today’s fast-paced digital world, choosing the right laptop has become a challenging task due to the vast number of brands, models, and specifications available.
-
-Many users end up purchasing laptops that do not meet their actual requirements, resulting in wasted money and dissatisfaction.
-
-Lapify is a console-based Python application designed to assist users in selecting suitable laptops and accessories based on their needs.
-""")
-
-    st.header("Objectives")
-
-    st.write("""
-• To guide users in selecting laptops according to categories  
-• To provide laptop brand and specification details  
-• To recommend accessories  
-• To create an interactive recommendation system  
-• To minimize wrong purchasing decisions
-""")
-
-    st.header("Conclusion")
-
-    st.write("""
-Lapify successfully demonstrates a console-based laptop and accessory recommendation system using Python and Streamlit.
-""")
-
 # ================= HOME =================
 
 elif menu == "Home":
@@ -262,6 +198,12 @@ elif menu == "Home":
 This laptop suggester allows users to view laptops, categories, accessories and display product details.
 """)
 
+    st.info("""
+Many people waste money on the wrong devices because they follow trends instead of their real needs,
+ending up with features they never use and performance they don’t get.
+
+Lapify helps users choose the right device so their money is spent wisely.
+""")
 # ================= BRANDS =================
 
 elif menu == "Laptop Brands":
