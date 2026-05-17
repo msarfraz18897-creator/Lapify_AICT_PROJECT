@@ -252,18 +252,18 @@ if menu == "Laptop Suggestor":
 
     st.markdown("---")
 
-    st.subheader("Laptop Specifications")
+st.subheader("Laptop Specifications")
 
-    if selected_model in laptop_specs:
+if selected_model in laptop_specs:
 
-        specs = laptop_specs[selected_model]
-        
-        for key, value in specs.items():
-            st.write(f"**{key}:** {value}")
+    specs = laptop_specs[selected_model]
 
-    else:
+    for key, value in specs.items():
+        st.write(f"**{key}:** {value}")
 
-        st.warning("Specifications not available for this model.")
+else:
+
+    st.warning("Specifications not available for this model.")
 
 # ================= ACCESSORIES =================
 
