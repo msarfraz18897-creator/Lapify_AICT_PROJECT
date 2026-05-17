@@ -227,6 +227,8 @@ elif menu == "Laptop Categories":
 
 elif menu == "Laptop Suggestor":
 
+   elif menu == "Laptop Suggestor":
+
     st.header("Laptop Suggestor")
 
     category = st.selectbox(
@@ -241,8 +243,27 @@ elif menu == "Laptop Suggestor":
 
     st.subheader("Available Models")
 
-    for model in laptops[category][brand]:
-        st.write(f"• {model}")
+    models = laptops[category][brand]
+
+    selected_model = st.selectbox(
+        "Select Laptop Model",
+        models
+    )
+
+    st.markdown("---")
+
+    st.subheader("Laptop Specifications")
+
+    if selected_model in laptop_specs:
+
+        specs = laptop_specs[selected_model]
+
+        for key, value in specs.items():
+            st.write(f"**{key}:** {value}")
+
+    else:
+
+        st.warning("Specifications not available for this model.")
 
 # ================= ACCESSORIES =================
 
