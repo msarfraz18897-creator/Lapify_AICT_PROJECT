@@ -67,6 +67,8 @@ laptops = {
     }
 }
 
+# ================= LAPTOP SPECS =================
+
 laptop_specs = {
 
     'MacBook Air M1': {
@@ -74,6 +76,13 @@ laptop_specs = {
         'RAM': '8GB',
         'Storage': '256GB SSD',
         'Display': '13.3-inch Retina'
+    },
+
+    'MacBook Air M2': {
+        'Processor': 'Apple M2',
+        'RAM': '8GB',
+        'Storage': '512GB SSD',
+        'Display': '13.6-inch Retina'
     },
 
     'Omen 16': {
@@ -95,36 +104,93 @@ laptop_specs = {
         'RAM': '16GB',
         'Storage': '512GB SSD',
         'Display': '13.4-inch FHD'
+    },
+
+    'Legion 5': {
+        'Processor': 'AMD Ryzen 7',
+        'RAM': '16GB',
+        'Storage': '512GB SSD',
+        'Graphics': 'RTX 3060'
+    },
+
+    'ROG Strix G16': {
+        'Processor': 'Intel Core i9',
+        'RAM': '16GB',
+        'Storage': '1TB SSD',
+        'Graphics': 'RTX 4070'
     }
 }
 
+# ================= FAQS =================
+
 faq_list = {
 
-    "How do I choose the right laptop?":
-        "Choose according to your requirements such as gaming, business, or studies.",
+    "1. How do I choose the right laptop?":
+    "Consider your usage: business, gaming, or basic tasks. Look at RAM, storage, processor, and battery life.",
 
-    "How much RAM do I need?":
-        "8GB is enough for normal users while 16GB or more is recommended for gaming and professional work.",
+    "2. What is the best laptop for students?":
+    "Business or student laptops with good battery life and portability are ideal.",
 
-    "What is SSD?":
-        "SSD is faster and more reliable than traditional HDD storage."
+    "3. Can I upgrade RAM or storage later?":
+    "Some laptops allow upgrades while others have soldered components.",
+
+    "4. How often should I replace my laptop?":
+    "Typically every 3-5 years depending on performance needs.",
+
+    "5. What is the difference between SSD and HDD?":
+    "SSD is much faster and more reliable than HDD.",
+
+    "6. What is a 2-in-1 laptop?":
+    "A laptop that works as both a tablet and laptop.",
+
+    "7. How much RAM do I need?":
+    "8GB for normal use and 16GB+ for gaming or professional work.",
+
+    "8. Are gaming laptops good for work?":
+    "Yes, gaming laptops are powerful enough for professional tasks.",
+
+    "9. Do I need a touchscreen laptop?":
+    "Only if you need stylus or touch functionality.",
+
+    "10. Can I game on a budget laptop?":
+    "Yes, but with lower graphics settings.",
+
+    "11. What is the difference between Intel and AMD?":
+    "Intel offers strong single-core performance while AMD excels in multi-core tasks.",
+
+    "12. How long does battery life last?":
+    "Usually between 4 to 20 hours depending on usage.",
+
+    "13. Should I prioritize CPU or GPU?":
+    "Gaming needs GPU while workstation tasks need CPU + RAM.",
+
+    "14. How can I maintain my laptop?":
+    "Keep it dust-free and avoid overheating.",
+
+    "15. Do you provide warranty info?":
+    "Always check the manufacturer warranty before purchase."
 }
+
+# ================= ACCESSORIES =================
 
 accessories = {
 
     "Keyboard": [
         "Logitech MX Keys",
-        "Razer BlackWidow"
+        "Razer BlackWidow",
+        "Keychron K2"
     ],
 
     "Microphone": [
         "Blue Yeti",
-        "HyperX QuadCast"
+        "HyperX QuadCast",
+        "Fifine A6V"
     ],
 
     "Cooling Pad": [
         "Cooler Master Notepal",
-        "KLIM Wind"
+        "KLIM Wind",
+        "Havit HV-F2056"
     ]
 }
 
@@ -147,11 +213,11 @@ menu = st.sidebar.radio(
     ]
 )
 
-# ================= FULL PROJECT REPORT =================
+# ================= PROJECT REPORT =================
 
 if menu == "Project Report":
 
-    st.title("Project Report")
+    st.title("Full Project Report")
 
     st.header("Pakistan Institute of Engineering & Applied Sciences")
 
@@ -171,9 +237,8 @@ if menu == "Project Report":
     st.subheader("Project Supervisors")
 
     st.markdown("""
-<h3 style='color:#00FF7F;'>Muhammad Musa</h3>
-
-<h3 style='color:#FF69B4;'>Urwa Rasheed</h3>
+<h3 style='color:#00BFFF;'>Muhammad Musa</h3>
+<h3 style='color:#00BFFF;'>Urwa Rasheed</h3>
 """, unsafe_allow_html=True)
 
     st.markdown("---")
@@ -181,62 +246,33 @@ if menu == "Project Report":
     st.header("1. Introduction")
 
     st.write("""
-In today’s fast-paced digital world, choosing the right laptop has become a challenging task due to the vast number of brands, models, and specifications available.
+Lapify is a smart laptop recommendation system designed to help users select laptops according to their needs and budget.
 
-Many users end up purchasing laptops that do not meet their actual requirements, resulting in wasted money and dissatisfaction.
-
-Lapify is a Python-based laptop recommendation system designed to help users choose suitable laptops and accessories according to their needs.
+Many users buy expensive laptops with unnecessary features. This project helps users make better and smarter decisions.
 """)
 
-    st.header("2. Problem Statement")
+    st.header("2. Objectives")
 
     st.write("""
-Many customers follow market trends instead of understanding their personal requirements while buying laptops.
-
-This often leads to purchasing devices with unnecessary features or insufficient performance.
+• Recommend laptops according to category  
+• Show laptop specifications  
+• Suggest accessories  
+• Provide FAQs and guidance  
+• Help users avoid wrong purchases
 """)
 
-    st.header("3. Objectives of the Project")
-
-    st.write("""
-• To guide users in selecting laptops according to categories  
-• To provide laptop brand and specification details  
-• To recommend accessories such as keyboards, microphones, and cooling pads  
-• To create an interactive recommendation system  
-• To minimize wrong purchasing decisions
-""")
-
-    st.header("4. Scope of the Project")
-
-    st.write("""
-• Laptop recommendations  
-• Laptop specifications  
-• Accessories suggestions  
-• FAQs and project information
-""")
-
-    st.header("5. Technologies Used")
+    st.header("3. Technologies Used")
 
     st.write("""
 • Python  
 • Streamlit  
-• JSON Data Handling  
-• File Handling  
-• Functions  
+• Dictionaries  
 • Conditional Statements  
-• Loops
+• Loops  
+• Functions
 """)
 
-    st.header("6. Project Workflow")
-
-    st.write("""
-1. User opens the application  
-2. User selects desired option  
-3. System processes the request  
-4. Results are displayed interactively
-""")
-
-    st.header("7. Main Features")
+    st.header("4. Features")
 
     st.write("""
 • Laptop Brands  
@@ -248,12 +284,10 @@ This often leads to purchasing devices with unnecessary features or insufficient
 • Contact Us
 """)
 
-    st.header("8. Conclusion")
+    st.header("5. Conclusion")
 
     st.write("""
-Lapify successfully demonstrates a laptop and accessories recommendation system using Python and Streamlit.
-
-The project helps users make informed purchasing decisions through an interactive and user-friendly interface.
+Lapify successfully demonstrates a modern laptop recommendation system using Python and Streamlit.
 """)
 
     st.success("Project Report Loaded Successfully")
@@ -304,14 +338,17 @@ elif menu == "Laptop Suggestor":
         list(laptops[category].keys())
     )
 
-    st.subheader("Available Models")
-
     models = laptops[category][brand]
 
     selected_model = st.selectbox(
         "Select Laptop Model",
         models
     )
+
+    st.subheader("Available Models")
+
+    for model in models:
+        st.write(f"• {model}")
 
     if selected_model in laptop_specs:
 
@@ -323,7 +360,7 @@ elif menu == "Laptop Suggestor":
             st.write(f"**{key}:** {value}")
 
     else:
-        st.warning("Detailed specifications available in premium version.")
+        st.warning("Detailed specifications are not available.")
 
 # ================= ACCESSORIES =================
 
@@ -336,60 +373,23 @@ elif menu == "Accessories":
         list(accessories.keys())
     )
 
+    st.subheader(accessory_type)
+
     for item in accessories[accessory_type]:
         st.write(f"• {item}")
 
-# ================= FAQ =================
+# ================= FAQS =================
 
-faq_list = {
+elif menu == "FAQs":
 
-    "1. How do I choose the right laptop?":
-    "Consider your usage: business, gaming, or basic tasks. Look at specs like RAM, storage, CPU, and battery life.",
+    st.header("Frequently Asked Questions")
 
-    "2. What is the best laptop for students?":
-    "Business or student laptops with long battery life, portability, and moderate performance are ideal.",
+    for question, answer in faq_list.items():
 
-    "3. Can I upgrade the RAM or storage later?":
-    "Depends on the model. Some laptops have soldered RAM or SSDs, so check specifications before buying.",
+        with st.expander(question):
+            st.write(answer)
 
-    "4. How often should I replace my laptop?":
-    "Typically every 3-5 years depending on usage, software requirements, and performance needs.",
-
-    "5. Do you provide warranty or support info?":
-    "Yes, always check the manufacturer warranty and available support plans.",
-
-    "6. What is the difference between SSD and HDD?":
-    "SSD is faster, quieter, and more durable than HDD. HDD is cheaper and offers larger storage.",
-
-    "7. What is a 2-in-1 laptop?":
-    "A 2-in-1 laptop can function as both a laptop and a tablet with touchscreen support.",
-
-    "8. How much RAM do I need?":
-    "8GB is enough for normal users while 16GB or more is recommended for gaming and professional work.",
-
-    "9. How long does a laptop battery last?":
-    "Battery life varies from 4 to 20 hours depending on model and usage.",
-
-    "10. Are gaming laptops suitable for work tasks?":
-    "Yes, gaming laptops are powerful enough for professional tasks but are usually heavier.",
-
-    "11. What is the difference between Intel and AMD processors?":
-    "Intel provides strong single-core performance while AMD offers excellent multi-core performance.",
-
-    "12. Should I prioritize CPU, GPU, or RAM?":
-    "It depends on your needs: Gaming = GPU, Workstation = CPU + RAM, Basic Use = balanced specifications.",
-
-    "13. Do I need a touchscreen laptop?":
-    "Only if you plan to use touch features or stylus input. Otherwise it is optional.",
-
-    "14. Can I use a laptop for gaming on a budget?":
-    "Yes, but budget gaming laptops may require lower graphics settings.",
-
-    "15. How do I clean and maintain my laptop?":
-    "Keep it dust-free, avoid liquids, use a cooling pad, and clean the screen with a microfiber cloth."
-}
-
-# ================= ABOUT =================
+# ================= ABOUT US =================
 
 elif menu == "About Us":
 
@@ -441,7 +441,7 @@ margin-top:15px;
 ">
 
 <h3 style="
-color:#00FF99;
+color:#00BFFF;
 font-size:30px;
 font-weight:700;
 font-family:Verdana;
@@ -451,7 +451,7 @@ Muhammad Musa
 </h3>
 
 <h3 style="
-color:#FF66C4;
+color:#00BFFF;
 font-size:30px;
 font-weight:700;
 font-family:Verdana;
@@ -474,7 +474,7 @@ Their encouragement, mentorship, and technical guidance played a major role in t
 <hr style="border:1px solid #444; margin-top:30px; margin-bottom:30px;">
 
 <h2 style="
-color:#00BFFF;
+color:#FFB000;
 font-size:34px;
 font-family:Arial;
 font-weight:bold;
@@ -490,7 +490,7 @@ margin-top:15px;
 ">
 
 <h3 style="
-color:#FFA500;
+color:#FFB000;
 font-size:32px;
 font-weight:700;
 font-family:Verdana;
@@ -500,7 +500,7 @@ Muhammad Sarfraz
 </h3>
 
 <h3 style="
-color:#7CFC00;
+color:#FFB000;
 font-size:32px;
 font-weight:700;
 font-family:Verdana;
@@ -532,6 +532,7 @@ To help users make smarter, faster, and more informed laptop purchasing decision
 
 </div>
 """, unsafe_allow_html=True)
+
 # ================= CONTACT =================
 
 elif menu == "Contact Us":
