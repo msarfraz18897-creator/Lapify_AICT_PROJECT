@@ -440,7 +440,7 @@ margin-top:15px;
 ">
 
 <h3 style="
-color:#FF4B4B;
+color:#00BFFF;
 font-size:32px;
 font-weight:700;
 font-family:Verdana;
@@ -450,7 +450,7 @@ Muhammad Sarfraz
 </h3>
 
 <h3 style="
-color:#FF4B4B;
+color:#00BFFF;
 font-size:32px;
 font-weight:700;
 font-family:Verdana;
