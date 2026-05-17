@@ -213,7 +213,7 @@ elif menu == "FAQs":
 
 elif menu == "About Us":
 
-    st.header("ℹ About Us")
+    st.header(" About Us")
 
     st.write("""
 Lapify is a smart laptop recommendation system developed to help users choose the right laptop according to their needs and budget.
