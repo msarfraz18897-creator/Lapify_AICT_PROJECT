@@ -190,7 +190,7 @@ menu = st.sidebar.radio(
 
 # ================= HOME =================
 
-elif menu == "Home":
+if menu == "Home":
 
     st.header("Home")
 
