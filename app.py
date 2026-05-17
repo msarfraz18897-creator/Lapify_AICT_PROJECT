@@ -149,9 +149,9 @@ menu = st.sidebar.radio(
 
 # ================= FULL PROJECT REPORT =================
 
-if menu == "Full Project Report":
+if menu == "Project Report":
 
-    st.title("Full Project Report")
+    st.title("Project Report")
 
     st.header("Pakistan Institute of Engineering & Applied Sciences")
 
@@ -356,44 +356,143 @@ elif menu == "About Us":
 
     st.header("About Us")
 
-    st.write("""
-Lapify is a smart laptop recommendation system developed to help users choose the right laptop according to their needs and budget.
-""")
-
     st.markdown("""
-<div style='padding:20px;border-radius:15px;background-color:#1e1e1e'>
+<div style="
+padding:35px;
+border-radius:18px;
+background: linear-gradient(135deg, #1f1f1f, #2b2b2b);
+box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+">
 
-<h2 style='color:#00FFFF;'>AICT Lab Project</h2>
+<h1 style="
+color:#00D4FF;
+font-size:42px;
+font-family:Arial;
+font-weight:700;
+margin-bottom:15px;
+">
+Lapify
+</h1>
 
-<p style='font-size:18px;color:white;'>
-This project was developed under the guidance and support of our respected instructors.
+<p style="
+font-size:20px;
+color:#E0E0E0;
+line-height:1.8;
+font-family:Arial;
+">
+Lapify is a smart laptop recommendation system developed to help users choose the right laptop according to their needs and budget.
 </p>
 
-<h2 style='color:#FFD700;'>Project Supervisors</h2>
+<hr style="border:1px solid #444; margin-top:25px; margin-bottom:25px;">
 
-<h3 style='color:#00FF7F;'>Muhammad Musa</h3>
+<h2 style="
+color:#FFD700;
+font-size:34px;
+font-family:Arial;
+font-weight:bold;
+">
+Project Supervisors
+</h2>
 
-<h3 style='color:#FF69B4;'>Urwa Rasheed</h3>
+<div style="
+background-color:#252525;
+padding:20px;
+border-radius:12px;
+margin-top:15px;
+">
 
-<p style='font-size:17px;color:#D3D3D3;'>
-Their encouragement and technical guidance played a major role in the successful completion of this project.
+<h3 style="
+color:#00FF99;
+font-size:30px;
+font-weight:700;
+font-family:Verdana;
+margin-bottom:12px;
+">
+Muhammad Musa
+</h3>
+
+<h3 style="
+color:#FF66C4;
+font-size:30px;
+font-weight:700;
+font-family:Verdana;
+">
+Urwa Rasheed
+</h3>
+
+</div>
+
+<p style="
+font-size:18px;
+color:#D6D6D6;
+line-height:1.8;
+margin-top:25px;
+font-family:Arial;
+">
+Their encouragement, mentorship, and technical guidance played a major role in the successful completion of this project.
 </p>
 
-<h2 style='color:#00BFFF;'>Developed By</h2>
+<hr style="border:1px solid #444; margin-top:30px; margin-bottom:30px;">
 
-<h3 style='color:#FFA500;'>Muhammad Sarfraz</h3>
+<h2 style="
+color:#00BFFF;
+font-size:34px;
+font-family:Arial;
+font-weight:bold;
+">
+Developed By
+</h2>
 
-<h3 style='color:#7CFC00;'>Mehwish Bibi</h3>
+<div style="
+background-color:#252525;
+padding:20px;
+border-radius:12px;
+margin-top:15px;
+">
 
-<h2 style='color:#FF6347;'>Our Goal</h2>
+<h3 style="
+color:#FFA500;
+font-size:32px;
+font-weight:700;
+font-family:Verdana;
+margin-bottom:12px;
+">
+Muhammad Sarfraz
+</h3>
 
-<p style='font-size:17px;color:white;'>
-To help users make smarter and more informed laptop purchasing decisions.
+<h3 style="
+color:#7CFC00;
+font-size:32px;
+font-weight:700;
+font-family:Verdana;
+">
+Mehwish Bibi
+</h3>
+
+</div>
+
+<hr style="border:1px solid #444; margin-top:30px; margin-bottom:30px;">
+
+<h2 style="
+color:#FF6347;
+font-size:34px;
+font-family:Arial;
+font-weight:bold;
+">
+Our Goal
+</h2>
+
+<p style="
+font-size:19px;
+color:#F5F5F5;
+line-height:1.8;
+font-family:Arial;
+">
+To help users make smarter, faster, and more informed laptop purchasing decisions through an interactive recommendation system.
 </p>
 
 </div>
 """, unsafe_allow_html=True)
-
 # ================= CONTACT =================
 
 elif menu == "Contact Us":
