@@ -216,12 +216,42 @@ elif menu == "About Us":
     st.header("ℹ About Us")
 
     st.write("""
-- Reliable laptop recommendations
-- Need-based suggestions
-- Better buying decisions
-- Smart technology guidance
+Lapify is a smart laptop recommendation system developed to help users choose the right laptop according to their needs and budget.
 """)
 
+    st.markdown("""
+<div style='padding:15px;border-radius:10px;background-color:#1e1e1e'>
+
+<h3 style='color:#00FFFF;'>🎓 ICT Lab Project</h3>
+
+<p style='font-size:18px;color:white;'>
+This project was developed under the guidance and support of our respected Lab Engineers.
+</p>
+
+<h2 style='color:#FFD700;'>👨‍🏫 Lab Engineers</h2>
+
+<h3 style='color:#00FF7F;'>✨ Muhammad Musa ✨</h3>
+
+<h3 style='color:#FF69B4;'>✨ Urwa Rasheed ✨</h3>
+
+<p style='font-size:17px;color:#D3D3D3;'>
+Their continuous encouragement, technical assistance, and support helped us complete this project successfully.
+</p>
+
+<h2 style='color:#00BFFF;'>👨‍💻 Developed By</h2>
+
+<h3 style='color:#FFA500;'>Muhammad Yousuf Raza</h3>
+
+<h3 style='color:#7CFC00;'>Hussain Ahmed</h3>
+
+<h2 style='color:#FF6347;'>🚀 Our Goal</h2>
+
+<p style='font-size:17px;color:white;'>
+To help users make smarter and more informed laptop purchasing decisions.
+</p>
+
+</div>
+""", unsafe_allow_html=True)
 # ================= CONTACT =================
 
 elif menu == "Contact Us":
