@@ -1,119 +1,233 @@
 import streamlit as st
-import json
 
-# ---------------- PAGE CONFIG ----------------
+# ================= PAGE CONFIG =================
 st.set_page_config(
     page_title="Lapify",
     page_icon="💻",
     layout="wide"
 )
 
-# ---------------- TITLE ----------------
+# ================= TITLE =================
 st.title("💻 Lapify - Laptop Recommendation System")
-st.markdown("Find the perfect laptop according to your needs.")
 
-# ---------------- LOAD FILES ----------------
-with open("Lapify.py1/laptops.json", "r") as file:
-    laptops_data = json.load(file)
+st.markdown("""
+Welcome to **Lapify** 🎯
 
-with open("Lapify.py1/laptop_accessories.json", "r") as file:
-    accessories_data = json.load(file)
+This smart laptop suggester helps users choose the right laptop
+according to their needs and budget.
+""")
 
-with open("Lapify.py1/faq.json", "r") as file:
-    faq_data = json.load(file)
+# ================= DATA =================
 
-# ---------------- SIDEBAR ----------------
+laptop_brands = [
+    "Apple",
+    "HP",
+    "Dell",
+    "Lenovo",
+    "Asus",
+    "Acer",
+    "Samsung",
+    "Huawei",
+    "Microsoft",
+]
+
+laptops = {
+    'Business/Students Laptops': {
+        'Apple': ['MacBook Air M1', 'MacBook Air M2', 'MacBook Pro 13'],
+        'HP': ['EliteBook 840', 'ProBook 450', 'Dragonfly'],
+        'Dell': ['Latitude 5440', 'Latitude 7440', 'XPS 13'],
+        'Lenovo': ['ThinkPad X1 Carbon', 'ThinkPad T14', 'ThinkPad L14']
+    },
+
+    'Gaming Laptops': {
+        'HP': ['Omen 16', 'Victus 15'],
+        'Dell': ['Alienware m15', 'Dell G15'],
+        'Lenovo': ['Legion 5', 'Legion 7'],
+        'Asus': ['ROG Strix G16', 'TUF Gaming F15']
+    },
+
+    'Workstation Laptops': {
+        'Apple': ['MacBook Pro 14 M2 Pro'],
+        'Dell': ['Precision 3581'],
+        'Lenovo': ['ThinkPad P1']
+    }
+}
+
+laptop_specs = {
+    'MacBook Air M1': {
+        'Processor': 'Apple M1',
+        'RAM': '8GB',
+        'Storage': '256GB SSD',
+        'Display': '13.3-inch Retina'
+    },
+
+    'Omen 16': {
+        'Processor': 'AMD Ryzen 7',
+        'RAM': '16GB',
+        'Storage': '1TB SSD',
+        'Display': '16.1-inch 165Hz'
+    },
+
+    'Alienware m15': {
+        'Processor': 'Intel Core i7',
+        'RAM': '16GB',
+        'Storage': '1TB SSD',
+        'Display': '15.6-inch 240Hz'
+    },
+
+    'XPS 13': {
+        'Processor': 'Intel Core i7',
+        'RAM': '16GB',
+        'Storage': '512GB SSD',
+        'Display': '13.4-inch FHD'
+    }
+}
+
+faq_list = {
+    "How do I choose the right laptop?":
+        "Choose according to your needs such as gaming, business or study.",
+
+    "How much RAM do I need?":
+        "8GB for normal use and 16GB+ for gaming or professional work.",
+
+    "What is SSD?":
+        "SSD is faster and more reliable than HDD."
+}
+
+accessories = {
+    "Keyboard": ["Logitech MX Keys", "Razer BlackWidow"],
+    "Microphone": ["Blue Yeti", "HyperX QuadCast"],
+    "Cooling Pad": ["Cooler Master Notepal", "KLIM Wind"]
+}
+
+# ================= SIDEBAR =================
+
 st.sidebar.title("Navigation")
 
-section = st.sidebar.radio(
-    "Go To",
+menu = st.sidebar.radio(
+    "Select Option",
     [
-        "Laptop Recommendations",
-        "Laptop Accessories",
-        "FAQs"
+        "Home",
+        "Laptop Brands",
+        "Laptop Categories",
+        "Laptop Suggestor",
+        "Accessories",
+        "FAQs",
+        "About Us",
+        "Contact Us"
     ]
 )
 
-# =====================================================
-# LAPTOP SECTION
-# =====================================================
+# ================= HOME =================
 
-if section == "Laptop Recommendations":
+if menu == "Home":
 
-    st.header("Laptop Categories")
+    st.header("🏠 Home")
 
-    categories = list(laptops_data.keys())
+    st.write("""
+Many people waste money on laptops they don't actually need.
+Lapify helps users choose the best laptop according to their requirements.
+""")
 
-    selected_category = st.selectbox(
-        "Select a Category",
-        categories
+# ================= BRANDS =================
+
+elif menu == "Laptop Brands":
+
+    st.header("💻 Laptop Brands")
+
+    for brand in laptop_brands:
+        st.write(f"✅ {brand}")
+
+# ================= CATEGORIES =================
+
+elif menu == "Laptop Categories":
+
+    st.header("📂 Laptop Categories")
+
+    for category in laptops.keys():
+        st.write(f"🔹 {category}")
+
+# ================= LAPTOP SUGGESTOR =================
+
+elif menu == "Laptop Suggestor":
+
+    st.header("🎯 Laptop Suggestor")
+
+    category = st.selectbox(
+        "Select Laptop Category",
+        list(laptops.keys())
     )
 
-    if st.button("Show Laptops"):
+    brand = st.selectbox(
+        "Select Brand",
+        list(laptops[category].keys())
+    )
 
-        st.subheader(f"{selected_category}")
+    st.subheader("Available Models")
 
-        laptops_list = laptops_data[selected_category]
+    models = laptops[category][brand]
 
-        for laptop in laptops_list:
+    selected_model = st.selectbox(
+        "Select Laptop Model",
+        models
+    )
 
-            st.markdown("---")
+    if selected_model in laptop_specs:
 
-            # If laptop is dictionary
-            if isinstance(laptop, dict):
+        st.subheader("Specifications")
 
-                for key, value in laptop.items():
-                    st.write(f"**{key}:** {value}")
+        specs = laptop_specs[selected_model]
 
-            else:
-                st.write(laptop)
+        for key, value in specs.items():
+            st.write(f"**{key}:** {value}")
 
-# =====================================================
-# ACCESSORIES SECTION
-# =====================================================
+    else:
+        st.warning("Specifications accessible with paid plan.")
 
-elif section == "Laptop Accessories":
+# ================= ACCESSORIES =================
 
-    st.header("Laptop Accessories")
+elif menu == "Accessories":
 
-    for accessory in accessories_data:
+    st.header("🖥 Laptop Accessories")
 
-        st.markdown("---")
+    accessory_type = st.selectbox(
+        "Select Accessory",
+        list(accessories.keys())
+    )
 
-        if isinstance(accessory, dict):
+    for item in accessories[accessory_type]:
+        st.write(f"✅ {item}")
 
-            for key, value in accessory.items():
-                st.write(f"**{key}:** {value}")
+# ================= FAQ =================
 
-        else:
-            st.write(accessory)
+elif menu == "FAQs":
 
-# =====================================================
-# FAQ SECTION
-# =====================================================
+    st.header("❓ Frequently Asked Questions")
 
-elif section == "FAQs":
+    for question, answer in faq_list.items():
 
-    st.header("Frequently Asked Questions")
+        with st.expander(question):
+            st.write(answer)
 
-    if isinstance(faq_data, list):
+# ================= ABOUT =================
 
-        for item in faq_data:
+elif menu == "About Us":
 
-            st.markdown("---")
+    st.header("ℹ About Us")
 
-            if isinstance(item, dict):
+    st.write("""
+- Reliable laptop recommendations
+- Need-based suggestions
+- Better buying decisions
+- Smart technology guidance
+""")
 
-                for key, value in item.items():
-                    st.write(f"**{key}:** {value}")
+# ================= CONTACT =================
 
-            else:
-                st.write(item)
+elif menu == "Contact Us":
 
-    elif isinstance(faq_data, dict):
+    st.header("📞 Contact Us")
 
-        for question, answer in faq_data.items():
-
-            st.markdown("---")
-            st.write(f"**Q:** {question}")
-            st.write(f"**A:** {answer}")
+    st.write("📍 PIEAS Islamabad, Pakistan")
+    st.write("📧 msarfraz18897@gmail.com")
+    st.write("📱 +923049476304")
