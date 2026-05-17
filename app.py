@@ -424,7 +424,7 @@ Provided continuous encouragement, valuable ideas, and professional mentorship t
 <hr style="border:1px solid #444; margin-top:30px; margin-bottom:30px;">
 
 <h2 style="
-color:#FFB000;
+color:#FFD700;
 font-size:34px;
 font-family:Arial;
 font-weight:bold;
@@ -463,7 +463,7 @@ Mehwish Bibi
 <hr style="border:1px solid #444; margin-top:30px; margin-bottom:30px;">
 
 <h2 style="
-color:#00BFFF;
+color:#FFD700;
 font-size:34px;
 font-family:Arial;
 font-weight:bold;
@@ -473,7 +473,7 @@ Our Goal
 
 <p style="
 font-size:19px;
-color:#00BFFF;
+color:#FF4B4B;
 line-height:1.8;
 font-family:Arial;
 ">
