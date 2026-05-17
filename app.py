@@ -240,9 +240,9 @@ Their continuous encouragement, technical assistance, and support helped us comp
 
 <h2 style='color:#00BFFF;'>👨‍💻 Developed By</h2>
 
-<h3 style='color:#FFA500;'>Muhammad Yousuf Raza</h3>
+<h3 style='color:#FFA500;'>Muhammad Sarfraz</h3>
 
-<h3 style='color:#7CFC00;'>Hussain Ahmed</h3>
+<h3 style='color:#7CFC00;'>Mehwish bibi</h3>
 
 <h2 style='color:#FF6347;'>🚀 Our Goal</h2>
 
@@ -260,4 +260,4 @@ elif menu == "Contact Us":
 
     st.write("📍 PIEAS Islamabad, Pakistan")
     st.write("📧 msarfraz18897@gmail.com")
-    st.write("📱 +923049476304")
+    st.write("whatsapp📱 +923049476304")
