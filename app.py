@@ -490,5 +490,5 @@ elif menu == "Contact Us":
     st.header("Contact Us")
 
     st.write("PIEAS University Islamabad,Pakistan")
-    st.markdown("<h4 style='color:#00BFFF;'>Whatsapp: 03049476304</h4>", unsafe_allow_html=True)
+    st.markdown("Whatsapp: <span style='color:#00BFFF;'>03049476304</span>", unsafe_allow_html=True)
     st.write("Email: msarfraz18897@gmail.com")
