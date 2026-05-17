@@ -1,4 +1,6 @@
 
+import streamlit as st
+
 # ================= PAGE CONFIG =================
 
 st.set_page_config(
