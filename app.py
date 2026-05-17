@@ -225,8 +225,8 @@ elif menu == "Laptop Categories":
 
 # ================= LAPTOP SUGGESTOR =================
 
-elif menu == "Laptop Suggestor":
-
+if menu == "Laptop Suggestor":
+    
    elif menu == "Laptop Suggestor":
 
     st.header("Laptop Suggestor")
