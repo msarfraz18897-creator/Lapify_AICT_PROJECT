@@ -275,42 +275,157 @@ elif menu == "FAQs":
 
 # ================= ABOUT US =================
 
-elif menu == "About Us":
-
-    st.header("About Us")
-
-    st.markdown("""
+st.markdown("""
 <div style="
 padding:35px;
 border-radius:18px;
 background: linear-gradient(135deg, #1f1f1f, #2b2b2b);
+box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
 ">
 
-<h1 style="color:#00D4FF;">Lapify</h1>
+<h1 style="
+color:#00D4FF;
+font-size:42px;
+font-family:Arial;
+font-weight:700;
+margin-bottom:15px;
+">
+Lapify
+</h1>
 
-<p style="font-size:20px;color:#E0E0E0;">
+<p style="
+font-size:20px;
+color:#E0E0E0;
+line-height:1.8;
+font-family:Arial;
+">
 Lapify is a smart laptop recommendation system developed to help users choose the right laptop according to their needs and budget.
 </p>
 
-<h2 style="color:#FFD700;">Project Supervisors</h2>
+<hr style="border:1px solid #444; margin-top:25px; margin-bottom:25px;">
 
-<h3 style="color:#00BFFF;">Muhammad Musa</h3>
-<h3 style="color:#00BFFF;">Urwa Rasheed</h3>
+<h2 style="
+color:#FFD700;
+font-size:34px;
+font-family:Arial;
+font-weight:bold;
+">
+Project Supervisors
+</h2>
 
-<h2 style="color:#FFB000;">Developed By</h2>
+<div style="
+background-color:#252525;
+padding:20px;
+border-radius:12px;
+margin-top:15px;
+">
 
-<h3 style="color:#FFB000;">Muhammad Sarfraz</h3>
-<h3 style="color:#FFB000;">Mehwish Bibi</h3>
+<h3 style="
+color:#00BFFF;
+font-size:30px;
+font-weight:700;
+font-family:Verdana;
+margin-bottom:10px;
+">
+Muhammad Musa
+</h3>
+
+<p style="
+font-size:17px;
+color:#D3D3D3;
+line-height:1.7;
+margin-bottom:25px;
+">
+A supportive and dedicated supervisor whose guidance and technical assistance greatly helped in the successful completion of this project.
+</p>
+
+<h3 style="
+color:#00BFFF;
+font-size:30px;
+font-weight:700;
+font-family:Verdana;
+margin-bottom:10px;
+">
+Urwa Rasheed
+</h3>
+
+<p style="
+font-size:17px;
+color:#D3D3D3;
+line-height:1.7;
+">
+Provided continuous encouragement, valuable ideas, and professional mentorship throughout the development of this project.
+</p>
+
+</div>
+
+<hr style="border:1px solid #444; margin-top:30px; margin-bottom:30px;">
+
+<h2 style="
+color:#FFB000;
+font-size:34px;
+font-family:Arial;
+font-weight:bold;
+">
+Developed By
+</h2>
+
+<div style="
+background-color:#252525;
+padding:20px;
+border-radius:12px;
+margin-top:15px;
+">
+
+<h3 style="
+color:#FF4B4B;
+font-size:32px;
+font-weight:700;
+font-family:Verdana;
+margin-bottom:15px;
+">
+Muhammad Sarfraz
+</h3>
+
+<h3 style="
+color:#FF4B4B;
+font-size:32px;
+font-weight:700;
+font-family:Verdana;
+">
+Mehwish Bibi
+</h3>
+
+</div>
+
+<hr style="border:1px solid #444; margin-top:30px; margin-bottom:30px;">
+
+<h2 style="
+color:#FF6347;
+font-size:34px;
+font-family:Arial;
+font-weight:bold;
+">
+Our Goal
+</h2>
+
+<p style="
+font-size:19px;
+color:#F5F5F5;
+line-height:1.8;
+font-family:Arial;
+">
+To help users make smarter, faster, and more informed laptop purchasing decisions through an interactive recommendation system.
+</p>
 
 </div>
 """, unsafe_allow_html=True)
-
 # ================= CONTACT =================
 
 elif menu == "Contact Us":
 
     st.header("Contact Us")
 
-    st.write("Location: Lapify, 58-B, 3rd Floor, Hafeez Center, Gulberg 3, Lahore")
-    st.write("Phone: 062-2733980")
-    st.write("Email: support@lapify.com")
+    st.write("PIEAS University Islamabad,Pakistan")
+    st.write("Whatsapp: 03049476304")
+    st.write("Email: msarfraz18897@gmail.com")
