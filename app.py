@@ -13,8 +13,7 @@ st.title("💻 Lapify - Laptop Recommendation System")
 st.markdown("""
 Welcome to **Lapify** 🎯
 
-This smart laptop suggester helps users choose the right laptop
-according to their needs and budget.
+This smart laptop recommendation system helps users choose the perfect laptop according to their needs and budget.
 """)
 
 # ================= DATA =================
@@ -32,6 +31,7 @@ laptop_brands = [
 ]
 
 laptops = {
+
     'Business/Students Laptops': {
         'Apple': ['MacBook Air M1', 'MacBook Air M2', 'MacBook Pro 13'],
         'HP': ['EliteBook 840', 'ProBook 450', 'Dragonfly'],
@@ -50,10 +50,23 @@ laptops = {
         'Apple': ['MacBook Pro 14 M2 Pro'],
         'Dell': ['Precision 3581'],
         'Lenovo': ['ThinkPad P1']
+    },
+
+    '2-in-1 / Convertible Laptops': {
+        'HP': ['Spectre x360'],
+        'Dell': ['Inspiron 14 2-in-1'],
+        'Lenovo': ['Yoga 7i']
+    },
+
+    'Budget / Entry-Level Laptops': {
+        'HP': ['HP 15'],
+        'Dell': ['Inspiron 15'],
+        'Lenovo': ['IdeaPad 3']
     }
 }
 
 laptop_specs = {
+
     'MacBook Air M1': {
         'Processor': 'Apple M1',
         'RAM': '8GB',
@@ -72,7 +85,7 @@ laptop_specs = {
         'Processor': 'Intel Core i7',
         'RAM': '16GB',
         'Storage': '1TB SSD',
-        'Display': '15.6-inch 240Hz'
+        'Graphics': 'RTX 3070'
     },
 
     'XPS 13': {
@@ -84,54 +97,176 @@ laptop_specs = {
 }
 
 faq_list = {
+
     "How do I choose the right laptop?":
-        "Choose according to your needs such as gaming, business or study.",
+        "Choose according to your requirements such as gaming, business, or studies.",
 
     "How much RAM do I need?":
-        "8GB for normal use and 16GB+ for gaming or professional work.",
+        "8GB is enough for normal users while 16GB or more is recommended for gaming and professional work.",
 
     "What is SSD?":
-        "SSD is faster and more reliable than HDD."
+        "SSD is faster and more reliable than traditional HDD storage."
 }
 
 accessories = {
-    "Keyboard": ["Logitech MX Keys", "Razer BlackWidow"],
-    "Microphone": ["Blue Yeti", "HyperX QuadCast"],
-    "Cooling Pad": ["Cooler Master Notepal", "KLIM Wind"]
+
+    "Keyboard": [
+        "Logitech MX Keys",
+        "Razer BlackWidow"
+    ],
+
+    "Microphone": [
+        "Blue Yeti",
+        "HyperX QuadCast"
+    ],
+
+    "Cooling Pad": [
+        "Cooler Master Notepal",
+        "KLIM Wind"
+    ]
 }
 
 # ================= SIDEBAR =================
 
-st.sidebar.title("Navigation")
+st.sidebar.title("📂 Navigation")
 
 menu = st.sidebar.radio(
     "Select Option",
     [
-        "Home",
-        "Laptop Brands",
-        "Laptop Categories",
-        "Laptop Suggestor",
-        "Accessories",
-        "FAQs",
-        "About Us",
-        "Contact Us"
+        "📘 Full Project Report",
+        "🏠 Home",
+        "💻 Laptop Brands",
+        "📂 Laptop Categories",
+        "🎯 Laptop Suggestor",
+        "🖥 Accessories",
+        "❓ FAQs",
+        "ℹ About Us",
+        "📞 Contact Us"
     ]
 )
 
+# ================= FULL PROJECT REPORT =================
+
+if menu == "📘 Full Project Report":
+
+    st.title("📘 Full Project Report")
+
+    st.markdown("""
+# Pakistan Institute of Engineering & Applied Sciences
+
+## AICT LAB PROJECT
+
+### A Console-Based Laptop & Accessories Recommendation System
+""")
+
+    st.markdown("---")
+
+    st.subheader("👨‍💻 Submitted By")
+
+    st.write("""
+• Muhammad Sarfraz  
+• Mehwish Bibi
+""")
+
+    st.subheader("👨‍🏫 Project Supervisors")
+
+    st.markdown("""
+<h3 style='color:#00FF7F;'>✨ Muhammad Musa ✨</h3>
+
+<h3 style='color:#FF69B4;'>✨ Urwa Rasheed ✨</h3>
+""", unsafe_allow_html=True)
+
+    st.markdown("---")
+
+    st.header("1. Introduction")
+
+    st.write("""
+In today’s fast-paced digital world, choosing the right laptop has become a challenging task due to the large number of available brands, models, and specifications.
+
+Lapify is a Python-based laptop recommendation system designed to help users choose suitable laptops and accessories according to their needs.
+""")
+
+    st.header("2. Problem Statement")
+
+    st.write("""
+Many users buy laptops without understanding their actual requirements, which often results in wasted money and dissatisfaction.
+""")
+
+    st.header("3. Objectives of the Project")
+
+    st.write("""
+• Recommend laptops according to categories  
+• Display laptop specifications  
+• Recommend accessories  
+• Build an interactive recommendation system  
+• Help users make better purchasing decisions
+""")
+
+    st.header("4. Scope of the Project")
+
+    st.write("""
+• Laptop recommendations  
+• Laptop specifications  
+• Accessories suggestions  
+• FAQs and project information
+""")
+
+    st.header("5. Technologies Used")
+
+    st.write("""
+• Python  
+• Streamlit  
+• JSON Data Handling  
+• Conditional Statements  
+• Functions & Loops
+""")
+
+    st.header("6. Project Workflow")
+
+    st.write("""
+1. User opens the application  
+2. User selects desired option  
+3. System processes the request  
+4. Results are displayed interactively
+""")
+
+    st.header("7. Main Features")
+
+    st.write("""
+✅ Laptop Brands  
+✅ Laptop Categories  
+✅ Laptop Suggestor  
+✅ Accessories  
+✅ FAQs  
+✅ About Us  
+✅ Contact Us
+""")
+
+    st.header("8. Conclusion")
+
+    st.write("""
+Lapify successfully demonstrates a smart laptop recommendation system using Python and Streamlit.
+
+The project provides users with useful guidance while applying important programming concepts in a practical way.
+""")
+
+    st.success("✅ Full Project Report Loaded Successfully")
+
 # ================= HOME =================
 
-if menu == "Home":
+elif menu == "🏠 Home":
 
     st.header("🏠 Home")
 
     st.write("""
 Many people waste money on laptops they don't actually need.
-Lapify helps users choose the best laptop according to their requirements.
+
+Lapify helps users choose the best laptop according to their requirements and budget.
 """)
 
 # ================= BRANDS =================
 
-elif menu == "Laptop Brands":
+elif menu == "💻 Laptop Brands":
 
     st.header("💻 Laptop Brands")
 
@@ -140,7 +275,7 @@ elif menu == "Laptop Brands":
 
 # ================= CATEGORIES =================
 
-elif menu == "Laptop Categories":
+elif menu == "📂 Laptop Categories":
 
     st.header("📂 Laptop Categories")
 
@@ -149,7 +284,7 @@ elif menu == "Laptop Categories":
 
 # ================= LAPTOP SUGGESTOR =================
 
-elif menu == "Laptop Suggestor":
+elif menu == "🎯 Laptop Suggestor":
 
     st.header("🎯 Laptop Suggestor")
 
@@ -163,7 +298,7 @@ elif menu == "Laptop Suggestor":
         list(laptops[category].keys())
     )
 
-    st.subheader("Available Models")
+    st.subheader("💻 Available Models")
 
     models = laptops[category][brand]
 
@@ -174,7 +309,7 @@ elif menu == "Laptop Suggestor":
 
     if selected_model in laptop_specs:
 
-        st.subheader("Specifications")
+        st.subheader("⚙ Specifications")
 
         specs = laptop_specs[selected_model]
 
@@ -182,16 +317,16 @@ elif menu == "Laptop Suggestor":
             st.write(f"**{key}:** {value}")
 
     else:
-        st.warning("Specifications accessible with paid plan.")
+        st.warning("Detailed specifications available in premium version.")
 
 # ================= ACCESSORIES =================
 
-elif menu == "Accessories":
+elif menu == "🖥 Accessories":
 
     st.header("🖥 Laptop Accessories")
 
     accessory_type = st.selectbox(
-        "Select Accessory",
+        "Select Accessory Type",
         list(accessories.keys())
     )
 
@@ -200,7 +335,7 @@ elif menu == "Accessories":
 
 # ================= FAQ =================
 
-elif menu == "FAQs":
+elif menu == "❓ FAQs":
 
     st.header("❓ Frequently Asked Questions")
 
@@ -211,38 +346,38 @@ elif menu == "FAQs":
 
 # ================= ABOUT =================
 
-elif menu == "About Us":
+elif menu == "ℹ About Us":
 
-    st.header(" About Us")
+    st.header("ℹ About Us")
 
     st.write("""
 Lapify is a smart laptop recommendation system developed to help users choose the right laptop according to their needs and budget.
 """)
 
     st.markdown("""
-<div style='padding:15px;border-radius:10px;background-color:#1e1e1e'>
+<div style='padding:20px;border-radius:15px;background-color:#1e1e1e'>
 
-<h3 style='color:#00FFFF;'>🎓 ICT Lab Project</h3>
+<h2 style='color:#00FFFF;'>🎓 AICT Lab Project</h2>
 
 <p style='font-size:18px;color:white;'>
-This project was developed under the guidance and support of our respected Lab Engineers.
+This project was developed under the guidance, mentorship, and support of our respected instructors.
 </p>
 
-<h2 style='color:#FFD700;'>👨‍🏫 Lab Engineers</h2>
+<h2 style='color:#FFD700;'>👨‍🏫 Project Supervisors</h2>
 
 <h3 style='color:#00FF7F;'>✨ Muhammad Musa ✨</h3>
 
 <h3 style='color:#FF69B4;'>✨ Urwa Rasheed ✨</h3>
 
 <p style='font-size:17px;color:#D3D3D3;'>
-Their continuous encouragement, technical assistance, and support helped us complete this project successfully.
+Their encouragement and technical guidance played a major role in the successful completion of this project.
 </p>
 
 <h2 style='color:#00BFFF;'>👨‍💻 Developed By</h2>
 
 <h3 style='color:#FFA500;'>Muhammad Sarfraz</h3>
 
-<h3 style='color:#7CFC00;'>Mehwish bibi</h3>
+<h3 style='color:#7CFC00;'>Mehwish Bibi</h3>
 
 <h2 style='color:#FF6347;'>🚀 Our Goal</h2>
 
@@ -252,12 +387,13 @@ To help users make smarter and more informed laptop purchasing decisions.
 
 </div>
 """, unsafe_allow_html=True)
+
 # ================= CONTACT =================
 
-elif menu == "Contact Us":
+elif menu == "📞 Contact Us":
 
     st.header("📞 Contact Us")
 
     st.write("📍 PIEAS Islamabad, Pakistan")
     st.write("📧 msarfraz18897@gmail.com")
-    st.write("whatsapp📱 +923049476304")
+    st.write("📱 WhatsApp: +92 304 9476304")
