@@ -420,6 +420,7 @@ To help users make smarter, faster, and more informed laptop purchasing decision
 
 </div>
 """, unsafe_allow_html=True)
+
 # ================= CONTACT =================
 
 elif menu == "Contact Us":
