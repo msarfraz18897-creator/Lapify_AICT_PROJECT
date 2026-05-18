@@ -282,6 +282,7 @@ if menu == "Home":
         return base64.b64encode(data).decode()
 
     img = get_base64("Lapify.py1/pieas.jpeg")
+
     st.markdown("<h1 style='color:#00BFFF;'>Home</h1>", unsafe_allow_html=True)
 
     st.write("""
@@ -319,31 +320,26 @@ This laptop suggester allows users to view laptops, categories, accessories and 
 
     st.markdown(page_bg, unsafe_allow_html=True)
 
-   st.markdown(f"""
-<style>
-.home-text {{
-    color: #FFD700;
-    font-size: 22px;
-    line-height: 1.8;
-    font-weight: 600;
-}}
-</style>
+    st.markdown(f"""
+    <div class="home-box">
 
-<div class="home-overlay">
+        <div class="home-overlay">
 
-<p class="home-text">
+            <p class="home-text">
 
-Many people waste money on the wrong devices because they follow trends instead of their real needs,
-ending up with features they never use and performance they don’t get.
+            Many people waste money on the wrong devices because they follow trends instead of their real needs,
+            ending up with features they never use and performance they don’t get.
 
-<br><br>
+            <br><br>
 
-Lapify helps users choose the right device so their money is spent wisely.
+            Lapify helps users choose the right device so their money is spent wisely.
 
-</p>
+            </p>
 
-</div>
-""", unsafe_allow_html=True)
+        </div>
+
+    </div>
+    """, unsafe_allow_html=True)
 # ================= BRANDS =================
 
 elif menu == "Laptop Brands":
