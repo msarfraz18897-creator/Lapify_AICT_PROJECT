@@ -367,11 +367,11 @@ elif menu == "Laptop Suggestor":
 
     else:
 
-    st.markdown("""
-    <p style='color:#FF4B4B; font-size:18px; font-weight:bold;'>
-    Specs not avaiable.For All Laptops Specs and Guidance contact us on whatsapp.
-    </p>
-    """, unsafe_allow_html=True)
+        st.markdown("""
+        <p style='color:#FF4B4B; font-size:18px; font-weight:bold;'>
+        Specs not avaiable.For All Laptops Specs and Guidance contact us on whatsapp.
+        </p>
+        """, unsafe_allow_html=True)
 
     st.markdown("</div>", unsafe_allow_html=True)
 # ================= ACCESSORIES =================
