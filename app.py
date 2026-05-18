@@ -312,7 +312,7 @@ This laptop suggester allows users to view laptops, categories, accessories and 
         color: #FFD700;
         font-size: 22px;
         line-height: 1.8;
-        font-weight: 500;
+        font-weight: 600;
     }}
 
     </style>
