@@ -324,22 +324,22 @@ This laptop suggester allows users to view laptops, categories, accessories and 
     <div class="home-box">
 
         <div class="home-overlay">
+ 
+           <p class="home-text">
 
-            <p class="home-text">
-
-            Many people waste money on the wrong devices because they follow trends instead of their real needs,
+           Many people waste money on the wrong devices because they follow trends instead of their real needs,
             ending up with features they never use and performance they don’t get.
 
-            <br><br>
-
+           <br><br>
+    
             Lapify helps users choose the right device so their money is spent wisely.
 
-            </p>
-
-        </div>
+        </p>
 
     </div>
-    """, unsafe_allow_html=True)
+
+</div>
+""", unsafe_allow_html=True)
 # ================= BRANDS =================
 
 elif menu == "Laptop Brands":
