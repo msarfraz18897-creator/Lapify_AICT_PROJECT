@@ -272,65 +272,82 @@ menu = st.sidebar.radio(
 
 # ================= HOME =================
 
-import base64
+if menu == "Home":
 
-def get_base64(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
+    import base64
 
-img = get_base64("pieas.jpeg")
+    def get_base64(bin_file):
+        with open(bin_file, 'rb') as f:
+            data = f.read()
+        return base64.b64encode(data).decode()
 
-page_bg = f"""
-<style>
+    img = get_base64("pieas.jpeg")
 
-.home-box {{
-    background-image: url("data:image/jpeg;base64,{img}");
-    background-size: cover;
-    background-position: center;
-    padding: 40px;
-    border-radius: 20px;
-    border: 1px solid #333;
-    margin-top: 20px;
-}}
+    st.header("Home")
 
-.home-overlay {{
-    background: rgba(0,0,0,0.65);
-    padding: 25px;
-    border-radius: 15px;
-}}
+    st.write("""
+This laptop suggester allows users to view laptops, categories, accessories and display product details.
+""")
 
-.home-text {{
-    color: #FFD700;
-    font-size: 22px;
-    line-height: 1.8;
-    font-weight: 500;
-}}
+    page_bg = f"""
+    <style>
 
-</style>
-"""
+    .home-box {{
+        background-image: url("data:image/jpeg;base64,{img}");
+        background-size: cover;
+        background-position: center;
+        padding: 40px;
+        border-radius: 20px;
+        border: 1px solid #333;
+        margin-top: 20px;
+    }}
 
-st.markdown(page_bg, unsafe_allow_html=True)
+    .home-overlay {{
+        background: rgba(0,0,0,0.70);
+        padding: 25px;
+        border-radius: 15px;
+    }}
 
-st.markdown("""
-<div class="home-box">
+    .home-text {{
+        color: #FFD700;
+        font-size: 22px;
+        line-height: 1.8;
+        font-weight: 500;
+    }}
 
-<div class="home-overlay">
+    </style>
+    """
 
-<p class="home-text">
+    st.markdown(page_bg, unsafe_allow_html=True)
 
-Many people waste money on the wrong devices because they follow trends instead of their real needs,
-ending up with features they never use and performance they don’t get.
+    st.markdown("""
+    <div class="home-box">
 
-<br><br>
+    <div class="home-overlay">
 
-Lapify helps users choose the right device so their money is spent wisely.
+    <p class="home-text">
 
-</p>
+    Many people waste money on the wrong devices because they follow trends instead of their real needs,
+    ending up with features they never use and performance they don’t get.
 
-</div>
-</div>
-""", unsafe_allow_html=True)
+    <br><br>
+
+    Lapify helps users choose the right device so their money is spent wisely.
+
+    </p>
+
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+# ================= BRANDS =================
+
+elif menu == "Laptop Brands":
+
+    st.header("Laptop Brands")
+
+    for brand in laptop_brands:
+        st.write(f"• {brand}")
 # ================= BRANDS =================
 
 elif menu == "Laptop Brands":
