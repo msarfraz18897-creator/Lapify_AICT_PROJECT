@@ -277,69 +277,71 @@ if menu == "Home":
     import base64
 
     def get_base64(bin_file):
-        with open(bin_file, 'rb') as f:
+        with open(bin_file, "rb") as f:
             data = f.read()
         return base64.b64encode(data).decode()
 
     img = get_base64("Lapify.py1/pieas.jpeg")
 
-    st.markdown("<h1 style='color:#00BFFF;'>Home</h1>", unsafe_allow_html=True)
+    st.markdown(
+        "<h1 style='color:#00BFFF;'>Home</h1>",
+        unsafe_allow_html=True
+    )
 
     st.write("""
 This laptop suggester allows users to view laptops, categories, accessories and display product details.
 """)
 
-    page_bg = f"""
-    <style>
+    st.markdown(
+        f"""
+        <style>
 
-    .home-box {{
-        background-image: url("data:image/jpeg;base64,{img}");
-        background-size: cover;
-        background-position: center;
-        padding: 40px;
-        border-radius: 20px;
-        border: 1px solid #333;
-        margin-top: 20px;
-    }}
+        .home-box {{
+            background-image: url("data:image/jpeg;base64,{img}");
+            background-size: cover;
+            background-position: center;
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #333;
+            margin-top: 20px;
+        }}
 
-    .home-overlay {{
-        background: rgba(0,0,0,0.70);
-        padding: 25px;
-        border-radius: 15px;
-    }}
+        .home-overlay {{
+            background: rgba(0,0,0,0.70);
+            padding: 25px;
+            border-radius: 15px;
+        }}
 
-    .home-text {{
-        color: #FFD700;
-        font-size: 22px;
-        line-height: 1.8;
-        font-weight: 600;
-    }}
+        .home-text {{
+            color: #FFD700;
+            font-size: 22px;
+            line-height: 1.8;
+            font-weight: 600;
+        }}
 
-    </style>
-    """
+        </style>
 
-    st.markdown(page_bg, unsafe_allow_html=True)
+        <div class="home-box">
 
-    st.markdown(f"""
-    <div class="home-box">
+            <div class="home-overlay">
 
-        <div class="home-overlay">
+                <p class="home-text">
 
-          <p class="home-text">
+                Many people waste money on the wrong devices because they follow trends instead of their real needs,
+                ending up with features they never use and performance they don’t get.
 
-        Many people waste money on the wrong devices because they follow trends instead of their real needs,
-        ending up with features they never use and performance they don’t get.
+                <br><br>
 
-        <br><br>
+                Lapify helps users choose the right device so their money is spent wisely.
 
-        Lapify helps users choose the right device so their money is spent wisely.
+                </p>
 
-        </p>
+            </div>
 
-    </div>
-
-</div>
-""", unsafe_allow_html=True)
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 # ================= BRANDS =================
 
 elif menu == "Laptop Brands":
