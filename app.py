@@ -281,26 +281,49 @@ This laptop suggester allows users to view laptops, categories, accessories and 
 """)
 
     st.markdown("""
-<div style="
-background-color:#1f1f1f;
-padding:20px;
-border-radius:12px;
-border:1px solid #333;
-">
+<style>
 
-<p style="
-color:#FFD700;
-font-size:20px;
-line-height:1.8;
-">
+.home-box {
+    background-image: url("pieas.jpeg");
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    margin-top: 20px;
+}
+
+.home-overlay {
+    background: rgba(0,0,0,0.65);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.home-text {
+    color: #FFD700;
+    font-size: 22px;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+</style>
+
+<div class="home-box">
+
+<div class="home-overlay">
+
+<p class="home-text">
+
 Many people waste money on the wrong devices because they follow trends instead of their real needs,
 ending up with features they never use and performance they don’t get.
 
 <br><br>
 
 Lapify helps users choose the right device so their money is spent wisely.
+
 </p>
 
+</div>
 </div>
 """, unsafe_allow_html=True)
 # ================= BRANDS =================
