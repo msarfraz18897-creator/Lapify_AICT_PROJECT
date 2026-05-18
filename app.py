@@ -272,42 +272,47 @@ menu = st.sidebar.radio(
 
 # ================= HOME =================
 
-if menu == "Home":
+import base64
 
-    st.header("Home")
+def get_base64(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
 
-    st.write("""
-This laptop suggester allows users to view laptops, categories, accessories and display product details.
-""")
+img = get_base64("pieas.jpeg")
 
-    st.markdown("""
+page_bg = f"""
 <style>
 
-.home-box {
-    background-image: url("pieas.jpeg");
+.home-box {{
+    background-image: url("data:image/jpeg;base64,{img}");
     background-size: cover;
     background-position: center;
     padding: 40px;
     border-radius: 20px;
     border: 1px solid #333;
     margin-top: 20px;
-}
+}}
 
-.home-overlay {
+.home-overlay {{
     background: rgba(0,0,0,0.65);
     padding: 25px;
     border-radius: 15px;
-}
+}}
 
-.home-text {
+.home-text {{
     color: #FFD700;
     font-size: 22px;
     line-height: 1.8;
     font-weight: 500;
-}
+}}
 
 </style>
+"""
 
+st.markdown(page_bg, unsafe_allow_html=True)
+
+st.markdown("""
 <div class="home-box">
 
 <div class="home-overlay">
