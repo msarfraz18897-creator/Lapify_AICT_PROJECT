@@ -280,12 +280,29 @@ if menu == "Home":
 This laptop suggester allows users to view laptops, categories, accessories and display product details.
 """)
 
-    st.info("""
+    st.markdown("""
+<div style="
+background-color:#1f1f1f;
+padding:20px;
+border-radius:12px;
+border:1px solid #333;
+">
+
+<p style="
+color:#FFD700;
+font-size:20px;
+line-height:1.8;
+">
 Many people waste money on the wrong devices because they follow trends instead of their real needs,
 ending up with features they never use and performance they don’t get.
 
+<br><br>
+
 Lapify helps users choose the right device so their money is spent wisely.
-""")
+</p>
+
+</div>
+""", unsafe_allow_html=True)
 # ================= BRANDS =================
 
 elif menu == "Laptop Brands":
