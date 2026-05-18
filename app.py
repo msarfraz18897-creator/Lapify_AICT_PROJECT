@@ -281,8 +281,7 @@ if menu == "Home":
             data = f.read()
         return base64.b64encode(data).decode()
 
-    img = get_base64("pieas.jpeg")
-
+    img = get_base64("Lapify.py1/pieas.jpeg")
     st.header("Home")
 
     st.write("""
