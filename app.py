@@ -11,7 +11,7 @@ st.set_page_config(
 
 # ================= TITLE =================
 
-st.title("Lapify - Laptop Recommendation System")
+st.markdown("<h1 style='color:#00BFFF;'>Lapify - Laptop Recommendation System</h1>", unsafe_allow_html=True)
 
 st.write("""
 Welcome to Lapify
@@ -282,7 +282,7 @@ if menu == "Home":
         return base64.b64encode(data).decode()
 
     img = get_base64("Lapify.py1/pieas.jpeg")
-    st.header("Home")
+    st.markdown("<h1 style='color:#00BFFF;'>Home</h1>", unsafe_allow_html=True)
 
     st.write("""
 This laptop suggester allows users to view laptops, categories, accessories and display product details.
@@ -324,7 +324,12 @@ This laptop suggester allows users to view laptops, categories, accessories and 
 
     <div class="home-overlay">
 
-    <p class="home-text">
+    .home-text {
+    color: #FFD700;
+    font-size: 22px;
+    line-height: 1.8;
+    font-weight: 600;
+}
 
     Many people waste money on the wrong devices because they follow trends instead of their real needs,
     ending up with features they never use and performance they don’t get.
