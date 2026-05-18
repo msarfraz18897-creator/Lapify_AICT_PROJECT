@@ -344,7 +344,6 @@ Lapify helps users choose the right device so their money is spent wisely.
 
 </div>
 """, unsafe_allow_html=True)
-
 # ================= BRANDS =================
 
 elif menu == "Laptop Brands":
