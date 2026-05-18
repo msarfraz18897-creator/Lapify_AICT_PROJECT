@@ -226,6 +226,8 @@ elif menu == "Laptop Categories":
 
 # ================= LAPTOP SUGGESTOR =================
 
+# ================= LAPTOP SUGGESTOR =================
+
 elif menu == "Laptop Suggestor":
 
     st.header("Laptop Suggestor")
@@ -240,7 +242,13 @@ elif menu == "Laptop Suggestor":
         list(laptops[category].keys())
     )
 
-    st.subheader("Available Models")
+    st.markdown("---")
+
+    st.markdown(f"""
+    <h2 style='color:#00BFFF;'>
+    {brand} Laptops
+    </h2>
+    """, unsafe_allow_html=True)
 
     models = laptops[category][brand]
 
@@ -251,57 +259,40 @@ elif menu == "Laptop Suggestor":
 
     st.markdown("---")
 
-    st.subheader("Laptop Specifications")
+    st.markdown(f"""
+    <div style="
+    background-color:#1f1f1f;
+    padding:25px;
+    border-radius:15px;
+    border:1px solid #333;
+    ">
 
-    laptop_specs = {
-
-        'MacBook Air M1': {
-            'Processor': 'Apple M1',
-            'RAM': '8GB',
-            'Storage': '256GB SSD',
-            'Display': '13.3-inch Retina'
-        },
-
-        'MacBook Air M2': {
-            'Processor': 'Apple M2',
-            'RAM': '8GB',
-            'Storage': '512GB SSD',
-            'Display': '13.6-inch Liquid Retina'
-        },
-
-        'MacBook Pro 13': {
-            'Processor': 'Apple M2',
-            'RAM': '8GB',
-            'Storage': '512GB SSD',
-            'Display': '13.3-inch Retina'
-        },
-
-        'Omen 16': {
-            'Processor': 'AMD Ryzen 7',
-            'RAM': '16GB',
-            'Storage': '1TB SSD',
-            'Graphics': 'RTX 4060'
-        },
-
-        'Alienware m15': {
-            'Processor': 'Intel Core i7',
-            'RAM': '16GB',
-            'Storage': '1TB SSD',
-            'Graphics': 'RTX 3070'
-        }
-    }
+    <h2 style='color:#FFD700;'>
+    {selected_model}
+    </h2>
+    """, unsafe_allow_html=True)
 
     if selected_model in laptop_specs:
 
         specs = laptop_specs[selected_model]
 
         for key, value in specs.items():
-            st.write(f"**{key}:** {value}")
+
+            st.markdown(f"""
+            <p style='font-size:18px; color:#E0E0E0;'>
+            <b>{key}:</b> {value}
+            </p>
+            """, unsafe_allow_html=True)
 
     else:
 
-        st.warning("Specifications not available for this model.")
+        st.markdown("""
+        <p style='color:#FF4B4B; font-size:18px;'>
+        Specifications not available for this model.
+        </p>
+        """, unsafe_allow_html=True)
 
+    st.markdown("</div>", unsafe_allow_html=True)
 # ================= ACCESSORIES =================
 
 if menu == "Accessories":
