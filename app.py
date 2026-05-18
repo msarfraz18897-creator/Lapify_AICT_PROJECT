@@ -277,46 +277,43 @@ if menu == "Home":
     import base64
 
     def get_base64(bin_file):
-        with open(bin_file, "rb") as f:
+        with open("Lapify.py1/pieas.jpeg", "rb") as f:
             data = f.read()
         return base64.b64encode(data).decode()
 
     img = get_base64("Lapify.py1/pieas.jpeg")
 
-    st.markdown(
-        "<h1 style='color:#00BFFF;'>Home</h1>",
-        unsafe_allow_html=True
-    )
+    st.markdown("<h1 style='color:#00BFFF;'>Home</h1>", unsafe_allow_html=True)
 
     st.write("""
 This laptop suggester allows users to view laptops, categories, accessories and display product details.
 """)
 
-    html_code = f"""
+    html_code = """
     <style>
 
-    .home-box {{
-        background-image: url("data:image/jpeg;base64,{img}");
+    .home-box {
+        background-image: url("data:image/jpeg;base64,""" + img + """");
         background-size: cover;
         background-position: center;
         padding: 40px;
         border-radius: 20px;
         border: 1px solid #333;
         margin-top: 20px;
-    }}
+    }
 
-    .home-overlay {{
+    .home-overlay {
         background: rgba(0,0,0,0.70);
         padding: 25px;
         border-radius: 15px;
-    }}
+    }
 
-    .home-text {{
+    .home-text {
         color: #FFD700;
         font-size: 22px;
         line-height: 1.8;
         font-weight: 600;
-    }}
+    }
 
     </style>
 
