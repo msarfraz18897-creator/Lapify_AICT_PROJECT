@@ -292,56 +292,55 @@ if menu == "Home":
 This laptop suggester allows users to view laptops, categories, accessories and display product details.
 """)
 
-    st.markdown(
-        f"""
-        <style>
+    html_code = f"""
+    <style>
 
-        .home-box {{
-            background-image: url("data:image/jpeg;base64,{img}");
-            background-size: cover;
-            background-position: center;
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid #333;
-            margin-top: 20px;
-        }}
+    .home-box {{
+        background-image: url("data:image/jpeg;base64,{img}");
+        background-size: cover;
+        background-position: center;
+        padding: 40px;
+        border-radius: 20px;
+        border: 1px solid #333;
+        margin-top: 20px;
+    }}
 
-        .home-overlay {{
-            background: rgba(0,0,0,0.70);
-            padding: 25px;
-            border-radius: 15px;
-        }}
+    .home-overlay {{
+        background: rgba(0,0,0,0.70);
+        padding: 25px;
+        border-radius: 15px;
+    }}
 
-        .home-text {{
-            color: #FFD700;
-            font-size: 22px;
-            line-height: 1.8;
-            font-weight: 600;
-        }}
+    .home-text {{
+        color: #FFD700;
+        font-size: 22px;
+        line-height: 1.8;
+        font-weight: 600;
+    }}
 
-        </style>
+    </style>
 
-        <div class="home-box">
+    <div class="home-box">
 
-            <div class="home-overlay">
+        <div class="home-overlay">
 
-                <p class="home-text">
+            <p class="home-text">
 
-                Many people waste money on the wrong devices because they follow trends instead of their real needs,
-                ending up with features they never use and performance they don’t get.
+            Many people waste money on the wrong devices because they follow trends instead of their real needs,
+            ending up with features they never use and performance they don’t get.
 
-                <br><br>
+            <br><br>
 
-                Lapify helps users choose the right device so their money is spent wisely.
+            Lapify helps users choose the right device so their money is spent wisely.
 
-                </p>
-
-            </div>
+            </p>
 
         </div>
-        """,
-        unsafe_allow_html=True
-    )
+
+    </div>
+    """
+
+    st.markdown(html_code, unsafe_allow_html=True)
 # ================= BRANDS =================
 
 elif menu == "Laptop Brands":
