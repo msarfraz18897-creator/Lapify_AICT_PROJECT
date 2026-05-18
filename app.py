@@ -120,6 +120,87 @@ laptops = {
         'Microsoft': ['Surface Laptop Studio', 'Surface Book 3', 'Surface Pro 9']
     }
 }
+# ================= LAPTOP SPECS =================
+
+laptop_specs = {
+
+    'MacBook Air M1': {
+        'Processor': 'Apple M1',
+        'RAM': '8GB',
+        'Storage': '256GB SSD',
+        'Display': '13.3-inch Retina'
+    },
+
+    'MacBook Air M2': {
+        'Processor': 'Apple M2',
+        'RAM': '8GB',
+        'Storage': '256GB SSD',
+        'Display': '13.6-inch Retina'
+    },
+
+    'MacBook Pro 13': {
+        'Processor': 'Apple M2',
+        'RAM': '8GB',
+        'Storage': '512GB SSD',
+        'Display': '13.3-inch Retina'
+    },
+
+    'MacBook Pro 14': {
+        'Processor': 'Apple M2 Pro',
+        'RAM': '16GB',
+        'Storage': '512GB SSD',
+        'Display': '14-inch Liquid Retina'
+    },
+
+    'MacBook Pro 16': {
+        'Processor': 'Apple M2 Max',
+        'RAM': '16GB',
+        'Storage': '1TB SSD',
+        'Display': '16-inch Liquid Retina'
+    },
+
+    'EliteBook 840': {
+        'Processor': 'Intel Core i5',
+        'RAM': '8GB',
+        'Storage': '512GB SSD',
+        'Display': '14-inch FHD'
+    },
+
+    'ProBook 450': {
+        'Processor': 'Intel Core i5',
+        'RAM': '8GB',
+        'Storage': '512GB SSD',
+        'Display': '15.6-inch FHD'
+    },
+
+    'Omen 16': {
+        'Processor': 'AMD Ryzen 7',
+        'RAM': '16GB',
+        'Storage': '1TB SSD',
+        'Display': '16.1-inch 165Hz'
+    },
+
+    'XPS 13': {
+        'Processor': 'Intel Core i7',
+        'RAM': '16GB',
+        'Storage': '512GB SSD',
+        'Display': '13.4-inch FHD'
+    },
+
+    'Inspiron 15': {
+        'Processor': 'Intel Core i3',
+        'RAM': '8GB',
+        'Storage': '256GB SSD',
+        'Display': '15.6-inch HD'
+    },
+
+    'Alienware m15': {
+        'Processor': 'Intel Core i7',
+        'RAM': '16GB',
+        'Storage': '1TB SSD',
+        'Display': '15.6-inch 240Hz'
+    }
+}
 
 # ================= FAQS =================
 
